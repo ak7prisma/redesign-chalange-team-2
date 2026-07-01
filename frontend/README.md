@@ -21,23 +21,23 @@ If you are developing a production application, we recommend updating the config
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
     extends: [
       // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
+      // Remove jseslint.configs.recommended and replace with this
+      jseslint.configs.recommendedTypeChecked,
       // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
+      jseslint.configs.strictTypeChecked,
       // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+      jseslint.configs.stylisticTypeChecked,
 
       // Other configs...
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
+        project: ['./jsconfig.node.json', './jsconfig.app.json'],
+        jsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
@@ -56,7 +56,7 @@ import reactDom from 'eslint-plugin-react-dom'
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
     extends: [
       // Other configs...
       // Enable lint rules for React
@@ -66,8 +66,8 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
+        project: ['./jsconfig.node.json', './jsconfig.app.json'],
+        jsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
