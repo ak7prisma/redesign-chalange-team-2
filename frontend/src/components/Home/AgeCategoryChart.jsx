@@ -16,7 +16,7 @@ export default function AgeCategoryChart() {
   ];
 
   return (
-    <section className="relative max-w-[1200px] mx-auto z-20">
+    <section className="relative max-w-[1366px] mx-auto z-20">
       {/* Background Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(162,89,255,0.08)_0%,transparent_65%)] pointer-events-none z-0" />
 
@@ -57,7 +57,7 @@ export default function AgeCategoryChart() {
                     whileInView={{ width: `${item.percentage}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.2, delay: index * 0.1, ease: "easeOut" }}
-                    className="h-8 bg-gradient-to-r from-primary-6 to-primary-4 rounded-xl shadow-[0_0_15px_rgba(162,89,255,0.25)]"
+                    className="h-12 bg-gradient-to-r from-primary-6 to-primary-4 rounded-xl shadow-[0_0_15px_rgba(162,89,255,0.25)]"
                   />
                   <span className="text-neutral-5 text-base md:text-lg font-semibold select-none whitespace-nowrap">
                     {item.value}

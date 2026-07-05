@@ -3,6 +3,7 @@ import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
 import AgeCategoryChart from '../components/Home/AgeCategoryChart';
 import PopularGames from '../components/Home/PopularGames';
+import ContentCategories from '../components/Home/ContentCategories';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <AgeCategoryChart />
       <PopularGames />
+      <ContentCategories />
     </div>
   );
 }

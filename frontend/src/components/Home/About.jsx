@@ -8,7 +8,7 @@ export default function About() {
   };
 
   return (
-    <section className="relative max-w-[1200px] mx-auto z-20">
+    <section className="relative max-w-[1366px] mx-auto z-20">
       <motion.div 
         initial="hidden" 
         whileInView="visible" 
