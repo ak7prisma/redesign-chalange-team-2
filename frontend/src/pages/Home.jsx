@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
 import AgeCategoryChart from '../components/Home/AgeCategoryChart';
+import PopularGames from '../components/Home/PopularGames';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <AgeCategoryChart />
+      <PopularGames />
     </div>
   );
 }
