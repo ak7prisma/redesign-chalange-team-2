@@ -11,7 +11,7 @@ const fadeInUp = {
 export default function About() {
   return (
     <div className="relative z-20 font-sans">
-      <div className="max-w-[1366px] mx-auto px-8 md:px-16 pt-12 space-y-12">
+      <div className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-12">
         <motion.div
           initial="hidden"
           animate="visible"

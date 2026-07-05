@@ -176,8 +176,8 @@ export default function Rating() {
   if (activeTab === '3') warningCheckColor = "bg-emerald-500/20 border-emerald-500/30 text-emerald-400";
 
   return (
-    <div className="relative z-20 min-h-screen text-white font-sans selection:bg-primary-4 selection:text-white pb-20">
-      <div className="max-w-[1366px] mx-auto px-6 md:px-12 pt-12 space-y-8">
+    <div className="relative z-20 min-h-screen text-white font-sans selection:bg-primary-4 selection:text-white">
+      <div className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-8">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between">
           <div className="space-y-4">
