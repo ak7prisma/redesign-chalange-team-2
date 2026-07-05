@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiGlobe, FiMail } from 'react-icons/fi';
 
 export default function Footer() {
@@ -15,17 +16,19 @@ export default function Footer() {
           
           {/* Logo & Socials */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-white tracking-wide">
-              IGRS
-            </h2>
+            <Link to="/">
+              <h2 className="text-4xl font-bold text-white tracking-wide">
+                IGRS
+              </h2>
+            </Link>
             <p className="text-neutral-5 text-sm leading-relaxed max-w-[280px]">
               Lembaga klasifikasi resmi di bawah naungan Direktorat Jenderal Ekosistem Digital.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+              <a href="https://igrs.id" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
                 <FiGlobe className="text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+              <a href="mailto:helpdesk@igrs.id" className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
                 <FiMail className="text-lg" />
               </a>
             </div>
@@ -37,10 +40,10 @@ export default function Footer() {
               Tautan Cepat
             </h4>
             <ul className="space-y-4 text-sm text-neutral-5">
-              <li><a href="#" className="hover:text-white transition-colors">Beranda</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Informasi Rating</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog & Berita</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Beranda</Link></li>
+              <li><Link to="/informasi-rating" className="hover:text-white transition-colors">Informasi Rating</Link></li>
+              <li><Link to="/games" className="hover:text-white transition-colors">Blog &amp; Berita</Link></li>
+              <li><Link to="/tentang" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
@@ -53,7 +56,7 @@ export default function Footer() {
               <li><a href="#" className="hover:text-white transition-colors">Syarat dan Ketentuan</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Maklumat Pelayanan</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Hubungi Kami</a></li>
+              <li><Link to="/kontak" className="hover:text-white transition-colors">Hubungi Kami</Link></li>
             </ul>
           </div>
 
