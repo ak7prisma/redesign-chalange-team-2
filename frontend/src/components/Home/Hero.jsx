@@ -60,7 +60,7 @@ export default function Hero() {
         
         <motion.p 
           initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.1 }}
-          className="text-gray-300 mb-10 text-base md:text-lg font-medium tracking-wide"
+          className="text-neutral-5 mb-10 text-base md:text-lg font-medium tracking-wide"
         >
           Temukan rating game yang sesuai untuk setiap pemain
         </motion.p>
@@ -75,7 +75,7 @@ export default function Hero() {
             placeholder="Cari Game..."
             className="flex-1 h-full bg-transparent text-gray-800 py-3 pl-8 pr-4 outline-none font-medium text-lg placeholder:text-gray-400 rounded-l-full"
           />
-          <button className="w-[75px] h-[60px] shrink-0 bg-[#A259FF] hover:bg-[#8a2be2] rounded-r-full flex items-center justify-center transition-colors cursor-pointer">
+          <button className="w-[75px] h-[60px] shrink-0 bg-primary-4 hover:bg-primary-3 rounded-r-full flex items-center justify-center transition-colors cursor-pointer">
             <FiSearch className="text-white text-2xl" strokeWidth={2.5} />
           </button>
         </motion.div>

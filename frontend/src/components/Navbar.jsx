@@ -20,7 +20,7 @@ export default function Navbar() {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-6 text-sm font-medium">
-          <button className="px-8 py-2.5 rounded-full bg-[#8a2be2] text-white hover:bg-[#7e22ce] transition-all shadow-[0_0_15px_rgba(138,43,226,0.4)]">
+          <button className="px-8 py-2.5 rounded-full bg-primary-3 text-white hover:bg-primary-4 transition-all shadow-[0_0_15px_rgba(108,43,217,0.4)]">
             Masuk
           </button>
           <button className="text-gray-200 hover:text-white transition-all hidden sm:block">
