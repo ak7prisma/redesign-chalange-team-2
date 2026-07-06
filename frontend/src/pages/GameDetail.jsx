@@ -12,7 +12,7 @@ export default function GameDetail() {
 
   return (
     <div className="relative z-20 min-h-screen text-neutral-6 font-sans">
-      <div className="max-w-[1366px] mx-auto px-4 md:px-8 pt-8 space-y-12 pb-16">
+      <div className="max-w-[1366px] mx-auto px-4 md:px-8 pt-8 space-y-12">
         <GameDetailHero game={game} />
         <GameDetailDescription game={game} />
         <GameDetailParentGuide game={game} />
