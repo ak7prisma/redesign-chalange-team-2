@@ -1,20 +1,20 @@
 // Satu sumber warna per rating — dipakai oleh semua komponen rating
 export const ratingTheme = {
   '3': {
-    logoBg:           'bg-emerald-600',
-    logoText:         'text-white',
-    badgeCls:         'bg-emerald-600 text-white shadow-[0_0_10px_rgba(16,185,129,0.3)]',
-    navCls:           'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]',
-    warningStyles:    'bg-emerald-600/10 border-emerald-600/20 text-emerald-300',
-    warningCheckColor:'bg-emerald-600/20 border-emerald-600/30 text-emerald-600',
-  },
-  '7': {
     logoBg:           'bg-blue-500',
     logoText:         'text-white',
     badgeCls:         'bg-blue-500 text-white shadow-[0_0_10px_rgba(59,130,246,0.3)]',
     navCls:           'bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.4)]',
     warningStyles:    'bg-blue-500/10 border-blue-500/20 text-blue-300',
     warningCheckColor:'bg-blue-500/20 border-blue-500/30 text-blue-400',
+  },
+  '7': {
+    logoBg:           'bg-emerald-600',
+    logoText:         'text-white',
+    badgeCls:         'bg-emerald-600 text-white shadow-[0_0_10px_rgba(16,185,129,0.3)]',
+    navCls:           'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]',
+    warningStyles:    'bg-emerald-600/10 border-emerald-600/20 text-emerald-300',
+    warningCheckColor:'bg-emerald-600/20 border-emerald-600/30 text-emerald-600',
   },
   '13': {
     logoBg:           'bg-yellow-500',
