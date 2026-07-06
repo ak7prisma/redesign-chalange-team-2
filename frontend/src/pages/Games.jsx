@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { gamesData } from '../data/gamesData';
 import GamesHeader from '../components/Games/GamesHeader';
 import GamesList from '../components/Games/GamesList';
@@ -16,7 +17,12 @@ export default function Games() {
 
   return (
     <div className="relative z-20 min-h-screen text-neutral-6 font-sans">
-      <div className="max-w-[1366px] mx-auto px-4 md:px-8 py-12 space-y-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="max-w-[1366px] mx-auto px-4 md:px-8 py-12 space-y-12"
+      >
         <GamesHeader />
         <GamesList
           games={paginatedGames}
@@ -24,7 +30,7 @@ export default function Games() {
           totalPages={totalPages}
           onPageChange={setCurrentPage}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

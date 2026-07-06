@@ -2,10 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { RiArrowRightLine } from 'react-icons/ri';
 import Badge from '../ui/Badge';
+import { motion } from 'motion/react';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 260,
+      damping: 25
+    }
+  }
+};
 
 export default function GameCard({ game }) {
   return (
-    <div className="group relative flex flex-col justify-between rounded-[2rem] bg-gradient-to-b from-primary-2/20 to-primary-1/40 border border-white/5 shadow-2xl overflow-hidden hover:border-primary-4/30 hover:shadow-primary-4/5 transition-all duration-500">
+    <motion.div
+      variants={cardVariants}
+      whileHover={{ y: -8, transition: { duration: 0.2 } }}
+      className="group relative flex flex-col justify-between rounded-[2rem] bg-gradient-to-b from-primary-2/20 to-primary-1/40 border border-white/5 shadow-2xl overflow-hidden hover:border-primary-4/30 hover:shadow-primary-4/5 transition-all duration-500"
+    >
       {/* Image */}
       <div>
         <div className="relative aspect-[16/10] overflow-hidden">
@@ -45,6 +63,6 @@ export default function GameCard({ game }) {
           <RiArrowRightLine className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

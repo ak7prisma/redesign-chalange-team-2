@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { detailData } from '../data/ratingData';
 import RatingNavigation from '../components/Rating/RatingNavigation';
 import RatingDescription from '../components/Rating/RatingDescription';
@@ -10,7 +11,12 @@ export default function Rating() {
 
   return (
     <div className="relative z-20 min-h-screen text-white font-sans selection:bg-primary-4 selection:text-white">
-      <div className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-5">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-5"
+      >
         
         <RatingNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -19,7 +25,7 @@ export default function Rating() {
           <RatingSummary activeTab={activeTab} current={current} />
         </div>
 
-      </div>
+      </motion.div>
     </div>
   );
 }

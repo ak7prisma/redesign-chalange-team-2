@@ -8,7 +8,7 @@ export function Layout({ children }) {
   return (
     <div className="bg-primary-1 bg-[url('/HomeBg.png')] bg-cover bg-top bg-no-repeat text-white min-h-screen font-sans overflow-hidden relative selection:bg-primary-4 selection:text-white">
       <Navbar />
-      <main>{children}</main>
+      <main className="pt-20 md:pt-28">{children}</main>
       <Footer />
     </div>
   );
@@ -18,7 +18,7 @@ export function RatingLayout({ children }) {
   return (
     <div className="bg-primary-1 bg-[url('/RatingBg.png')] bg-cover bg-top bg-no-repeat text-white min-h-screen font-sans overflow-hidden relative selection:bg-primary-4 selection:text-white">
       <Navbar />
-      <main>{children}</main>
+      <main className="pt-20 md:pt-28">{children}</main>
       <Footer />
     </div>
   );
@@ -28,7 +28,7 @@ export function GamesLayout({ children }) {
   return (
     <div className="bg-primary-1 bg-[url('/GamesBg.png')] bg-cover bg-top bg-no-repeat text-white min-h-screen font-sans overflow-hidden relative selection:bg-primary-4 selection:text-white">
       <Navbar />
-      <main>{children}</main>
+      <main className="pt-20 md:pt-28">{children}</main>
       <Footer />
     </div>
   );
@@ -38,7 +38,7 @@ export function GameLayout({ children }) {
   return (
     <div className="bg-primary-1 bg-[url('/DetailGameBg.png')] bg-cover bg-top bg-no-repeat text-white min-h-screen font-sans overflow-hidden relative selection:bg-primary-4 selection:text-white">
       <Navbar />
-      <div className="max-w-[1366px] mx-auto px-4 md:px-8 pt-6">
+      <div className="max-w-[1366px] mx-auto px-4 md:px-8 pt-24 md:pt-32">
         <Link
           to="/games"
           className="inline-flex items-center gap-2 text-[#a7a2cb] font-semibold hover:text-white transition-colors duration-200 text-sm md:text-base"

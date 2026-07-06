@@ -32,7 +32,7 @@ export default function GameDetailParentGuide({ game }) {
         </div>
 
         {/* Psychology Note */}
-        <div className="bg-gradient-to-br from-primary-2 to-primary-1 border border-neutral-6/20 rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-center">
+        <div className="bg-gradient-to-b from-primary-3 to-primary-1 border-2 border-neutral-6/70 rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-center">
           <div className="bg-white/10 w-12 h-12 rounded-full flex items-center justify-center mb-6">
             <FaHeadSideVirus className="text-3xl text-neutral-6" />
           </div>
