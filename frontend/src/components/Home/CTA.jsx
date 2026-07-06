@@ -20,11 +20,11 @@ export default function CTA() {
 
         <div className="relative z-10 space-y-6 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-semibold text-primary-5 tracking-tight leading-tight">
-            Siap Daftarkan Game Anda?
+            Siap Daftarkan Gim Anda?
           </h2>
           
           <p className="text-primary-5 text-md md:text-base font-normal leading-relaxed max-w-3xl mx-auto tracking-wider">
-            Gabung bersama ribuan pengembang game lainnya untuk membangun ekosistem digital Indonesia yang aman dan mengedukasi.
+            Gabung bersama ribuan pengembang gim lainnya untuk membangun ekosistem digital Indonesia yang aman dan mengedukasi.
           </p>
 
           <div className="pt-4">

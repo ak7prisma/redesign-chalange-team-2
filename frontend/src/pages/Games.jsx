@@ -47,7 +47,7 @@ export default function Games() {
             className="flex flex-col items-center justify-center py-24 space-y-4 text-center"
           >
             <span className="text-6xl">🎮</span>
-            <h3 className="text-2xl font-bold text-white">Game tidak ditemukan</h3>
+            <h3 className="text-2xl font-bold text-white">Gim tidak ditemukan</h3>
             <p className="text-neutral-5">Coba ubah kata kunci pencarian atau filter yang dipilih.</p>
           </motion.div>
         ) : (

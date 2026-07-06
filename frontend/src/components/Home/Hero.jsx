@@ -62,7 +62,7 @@ export default function Hero() {
           initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.1 }}
           className="text-neutral-6 mb-7 md:mb-10 text-sm md:text-lg font-base tracking-widest px-4"
         >
-          Temukan rating game yang sesuai untuk setiap pemain
+          Temukan rating gim yang sesuai untuk setiap pemain
         </motion.p>
 
         <motion.div 
@@ -71,7 +71,7 @@ export default function Hero() {
         >
           <input 
             type="text" 
-            placeholder="Cari Game..."
+            placeholder="Cari Gim..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={handleKeyDown}

@@ -25,10 +25,10 @@ export default function GamesHeader({
         className="text-center space-y-4 max-w-3xl mx-auto"
       >
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-primary-5 via-primary-5 to-primary-3 bg-clip-text text-transparent">
-          Pustaka Game Terdaftar
+          Pustaka Gim Terdaftar
         </h1>
         <p className="text-neutral-5 text-sm md:text-base leading-relaxed">
-          Telusuri koleksi game yang telah diklasifikasikan oleh Indonesian Game Rating System.
+          Telusuri koleksi gim yang telah diklasifikasikan oleh Indonesian Game Rating System.
           Temukan konten yang sesuai dengan kategori usia keluarga Anda.
         </p>
       </motion.div>
@@ -44,7 +44,7 @@ export default function GamesHeader({
             <BiSearch className="text-neutral-5 w-4 h-4" />
             <input
               type="text"
-              placeholder="Cari game berdasarkan nama atau genre..."
+              placeholder="Cari gim berdasarkan nama atau genre..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className="flex-1 bg-transparent text-white placeholder:text-neutral-5 outline-none text-sm"

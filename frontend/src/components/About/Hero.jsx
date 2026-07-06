@@ -30,7 +30,7 @@ export default function AboutHero() {
 
       <p className="text-neutral-6 text-lg md:text-2xl leading-relaxed max-w-[90%] font-light tracking-wide">
         Kami hadir untuk memberikan transparansi dan perlindungan bagi pemain
-        game di Indonesia melalui klasifikasi konten yang akurat dan berbasis
+        gim di Indonesia melalui klasifikasi konten yang akurat dan berbasis
         regulasi pemerintah.
       </p>
 
@@ -40,7 +40,7 @@ export default function AboutHero() {
           variant="primary" 
           icon={FiArrowRight}
         >
-          Daftar Game
+          Daftar Gim
         </Button>
         
         <Button 

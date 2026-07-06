@@ -27,7 +27,7 @@ export default function AgeCategoryChart() {
             Kategori Usia
           </h4>
           <p className="text-neutral-6 text-sm md:text-base font-normal tracking-wide">
-            Ribuan game telah diklasifikasikan berdasarkan usia
+            Ribuan gim telah diklasifikasikan berdasarkan usia
           </p>
         </div>
 

@@ -99,7 +99,7 @@ export default function Maintenance() {
               to="/games"
               className="px-8 py-3 rounded-full border border-white/15 bg-white/5 text-white font-semibold hover:bg-white/10 transition-all duration-300 text-sm md:text-base"
             >
-              Lihat Daftar Game
+              Lihat Daftar Gim
             </Link>
           </motion.div>
         </section>
