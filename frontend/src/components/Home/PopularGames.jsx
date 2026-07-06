@@ -19,7 +19,6 @@ export default function PopularGames() {
         variants={fadeInUp}
         className="space-y-10"
       >
-        {/* Title */}
         <div className="flex justify-between items-center px-2">
           <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight pl-2">
             Gim Populer
@@ -32,7 +31,6 @@ export default function PopularGames() {
           </Link>
         </div>
 
-        {/* Grid Container */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {popularGamesData.map((game, i) => (
             <motion.div
@@ -44,9 +42,7 @@ export default function PopularGames() {
               transition={{ delay: i * 0.1 }}
               className="bg-white rounded-2xl md:rounded-[2rem] p-2.5 md:p-4 shadow-[0_20px_40px_rgba(0,0,0,0.25)] flex flex-col justify-between h-full hover:scale-[1.02] transition-transform duration-300 group"
             >
-              {/* Card Content Wrapper */}
               <div>
-                {/* Image Container */}
                 <div className="relative w-full aspect-square rounded-xl md:rounded-[1.5rem] overflow-hidden bg-gray-100">
                   <img
                     src={game.img}
@@ -55,7 +51,6 @@ export default function PopularGames() {
                   />
                 </div>
 
-                {/* Text Details */}
                 <div className="mt-3 md:mt-5 px-1">
                   <h3 className="text-sm md:text-2xl font-bold text-[#0D0A14] tracking-tight line-clamp-1">
                     {game.title}
@@ -66,7 +61,6 @@ export default function PopularGames() {
                 </div>
               </div>
 
-              {/* Card Footer */}
               <div className="mt-4 md:mt-6 flex justify-between items-center px-1">
                 <span className="text-[#A0A0B3] text-[9px] md:text-xs font-semibold cursor-pointer group-hover:text-primary-4 transition-colors">
                   Selengkapnya →

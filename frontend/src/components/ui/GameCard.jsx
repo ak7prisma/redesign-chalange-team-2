@@ -24,7 +24,6 @@ export default function GameCard({ game }) {
       whileHover={{ y: -8, transition: { duration: 0.2 } }}
       className="group relative flex flex-col justify-between rounded-[2rem] bg-gradient-to-b from-primary-2/20 to-primary-1/40 border border-white/5 shadow-2xl overflow-hidden hover:border-primary-4/30 hover:shadow-primary-4/5 transition-all duration-500"
     >
-      {/* Image */}
       <div>
         <div className="relative aspect-[16/10] overflow-hidden">
           <img
@@ -32,19 +31,16 @@ export default function GameCard({ game }) {
             alt={game.title}
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          {/* Age Rating Badge */}
           <span className="absolute top-4 right-4">
             <Badge variant={game.ratingVariant}>{game.rating}</Badge>
           </span>
         </div>
 
-        {/* Content */}
         <div className="p-3 md:p-6 space-y-2 md:space-y-4">
           <h3 className="text-sm md:text-2xl font-bold tracking-wide text-neutral-6 group-hover:text-primary-4 transition-colors duration-300 line-clamp-1">
             {game.title}
           </h3>
 
-          {/* Genre Tags */}
           <div className="flex flex-wrap gap-1.5 md:gap-2">
             {game.tags.slice(0, 2).map((tag) => (
               <Badge key={tag} variant="tag" className="text-[9px] md:text-xs px-1.5 py-0.5 md:px-3 md:py-1.5">{tag}</Badge>
@@ -53,7 +49,6 @@ export default function GameCard({ game }) {
         </div>
       </div>
 
-      {/* Action Button */}
       <div className="p-3 md:p-6 pt-0 mt-auto">
         <Link
           to={`/games/${game.id}`}

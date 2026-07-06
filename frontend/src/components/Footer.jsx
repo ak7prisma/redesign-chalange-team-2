@@ -12,10 +12,8 @@ export default function Footer() {
       }}
     >
       <div className="max-w-[1366px] mx-auto px-4 md:px-8">
-        {/* Footer Top */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
           
-          {/* Logo & Socials */}
           <div className="col-span-2 md:col-span-1 space-y-6">
             <Link to="/">
               <h2 className="text-4xl font-bold text-white tracking-wide">
@@ -35,7 +33,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Tautan Cepat */}
           <div className="space-y-6">
             <h4 className="text-xs font-bold text-primary-5 tracking-widest uppercase">
               Tautan Cepat
@@ -51,7 +48,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legalitas */}
           <div className="space-y-6">
             <h4 className="text-xs font-bold text-primary-5 tracking-widest uppercase">
               Legalitas
@@ -73,7 +69,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Kontak */}
           <div className="space-y-6">
             <h4 className="text-xs font-bold text-primary-5 tracking-widest uppercase">
               Kontak
@@ -94,7 +89,6 @@ export default function Footer() {
           
         </div>
 
-        {/* Footer Bottom Copyright */}
         <div className="border-t border-white/5 pt-8 text-center">
           <p className="text-neutral-5 text-xs tracking-wider">
             © IGRS 2026 - Direktorat Jenderal Ekosistem Digital | Kementerian Komunikasi dan Digital RI

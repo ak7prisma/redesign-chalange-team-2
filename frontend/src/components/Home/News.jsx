@@ -19,7 +19,6 @@ export default function News() {
         variants={fadeInUp}
         className="space-y-10"
       >
-        {/* Header */}
         <div className="flex justify-between items-center px-2">
           <h2 className="text-2xl md:text-4xl font-semibold text-white tracking-tight">
             Berita Terbaru
@@ -32,7 +31,6 @@ export default function News() {
           </button>
         </div>
 
-        {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {newsData.map((news, i) => (
             <motion.div
@@ -44,10 +42,8 @@ export default function News() {
               transition={{ delay: i * 0.1 }}
               className="bg-transparent border-2 border-white/10 rounded-3xl overflow-hidden flex flex-col justify-between group hover:bg-white/10 hover:border-white/10 hover:scale-[1.02] transition-all duration-300 shadow-xl"
             >
-              {/* Card Top: Image & Tag */}
               <div>
                 <div className="relative aspect-[16/10] overflow-hidden bg-white/5">
-                  {/* Tag Badge */}
                   <span className={`absolute top-4 left-4 z-10 border rounded-md px-2.5 py-1 text-[10px] font-bold tracking-wider ${news.tagColor}`}>
                     {news.tag}
                   </span>
@@ -58,7 +54,6 @@ export default function News() {
                   />
                 </div>
 
-                {/* Card Content */}
                 <div className="p-6 space-y-3">
                   <p className="text-neutral-6 text-sm font-bold tracking-widest uppercase">
                     {news.date}
@@ -72,7 +67,6 @@ export default function News() {
                 </div>
               </div>
 
-              {/* Card Footer */}
               <div className="px-6 pb-6 pt-2">
                 <div className="flex items-center gap-2 text-primary-5 text-[10px] font-semibold tracking-wider select-none">
                   <FiClock className="text-sm" />

@@ -23,7 +23,6 @@ export default function GameDetailParentGuide({ game }) {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch pt-4">
-        {/* Tips Column */}
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-neutral-6 mb-4">Tips Pengawasan</h3>
           {game.parentalTips.map((tip, idx) => (
@@ -31,7 +30,6 @@ export default function GameDetailParentGuide({ game }) {
           ))}
         </div>
 
-        {/* Psychology Note */}
         <div className="bg-gradient-to-b from-primary-3 to-primary-1 border-2 border-neutral-6/70 rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-center">
           <div className="bg-white/10 w-12 h-12 rounded-full flex items-center justify-center mb-6">
             <FaHeadSideVirus className="text-3xl text-neutral-6" />

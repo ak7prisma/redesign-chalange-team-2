@@ -5,7 +5,6 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
   return (
     <div className="flex flex-col items-center gap-4 pt-10">
       <div className="flex items-center gap-6">
-        {/* Prev Button */}
         <button
           onClick={() => onPageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
@@ -15,7 +14,6 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
           <RiArrowLeftSLine className="w-6 h-6" />
         </button>
 
-        {/* Page Text */}
         <div className="text-center">
           <span className="text-lg font-semibold tracking-wide text-primary-5">
             Halaman <span className="font-bold">{currentPage}</span> dari{' '}
@@ -23,7 +21,6 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
           </span>
         </div>
 
-        {/* Next Button */}
         <button
           onClick={() => onPageChange(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
@@ -34,7 +31,6 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         </button>
       </div>
 
-      {/* Dot Indicators */}
       <div className="flex items-center gap-1.5 mt-2">
         {Array.from({ length: totalPages }).map((_, index) => {
           const pageNum = index + 1;

@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiSearch } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import { floatingIcons } from '../../data/homeExtraData';
 
 export default function Hero() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
+  const handleSearch = () => {
+    const q = searchQuery.trim();
+    if (q) {
+      navigate(`/games?q=${encodeURIComponent(q)}`);
+    } else {
+      navigate('/games');
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') handleSearch();
+  };
+
   return (
     <section className="relative w-full h-[80vh] min-h-[520px] md:h-[85vh] md:min-h-[600px] flex flex-col justify-center items-center">
-      {/* Floating Game */}
       <div className="absolute inset-0 pointer-events-none max-w-[1440px] mx-auto w-full">
         <div className="relative w-full h-full">
           {floatingIcons.map((icon) => (
@@ -34,7 +50,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Text Content & Search */}
       <div className="relative z-20 text-center flex flex-col items-center w-full px-4 -mt-10">
         <motion.h1 
           initial="hidden" animate="visible" variants={fadeInUp}
@@ -50,7 +65,6 @@ export default function Hero() {
           Temukan rating game yang sesuai untuk setiap pemain
         </motion.p>
 
-        {/* Search Bar */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="relative w-full max-w-[650px] flex items-center bg-white rounded-full h-[52px] md:h-[60px] shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
@@ -58,9 +72,15 @@ export default function Hero() {
           <input 
             type="text" 
             placeholder="Cari Game..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
             className="flex-1 h-full bg-transparent text-gray-800 py-3 pl-5 md:pl-8 pr-4 outline-none font-medium text-base md:text-lg placeholder:text-gray-400 rounded-l-full"
           />
-          <button className="w-[60px] md:w-[75px] h-full shrink-0 bg-primary-4 hover:bg-primary-3 rounded-r-full flex items-center justify-center transition-colors cursor-pointer">
+          <button
+            onClick={handleSearch}
+            className="w-[60px] md:w-[75px] h-full shrink-0 bg-primary-4 hover:bg-primary-3 rounded-r-full flex items-center justify-center transition-colors cursor-pointer"
+          >
             <FiSearch className="text-white text-xl md:text-2xl" strokeWidth={2.5} />
           </button>
         </motion.div>

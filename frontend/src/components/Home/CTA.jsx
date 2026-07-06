@@ -16,7 +16,6 @@ export default function CTA() {
         variants={fadeInUp}
         className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl py-16 px-8 md:py-20 md:px-16 text-center shadow-2xl overflow-hidden"
       >
-        {/* Glow Effects inside card */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(162,89,255,0.15)_0%,transparent_75%)] pointer-events-none z-0" />
 
         <div className="relative z-10 space-y-6 max-w-4xl mx-auto">

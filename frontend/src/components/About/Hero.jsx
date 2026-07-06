@@ -23,13 +23,11 @@ export default function AboutHero() {
         </Badge>
       </div>
 
-      {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-base text-white leading-relaxed">
         Membangun Ekosistem Digital yang{' '}
         <span className="text-primary-4">Aman dan Terpercaya</span>
       </h1>
 
-      {/* Deskripsi */}
       <p className="text-neutral-6 text-lg md:text-2xl leading-relaxed max-w-[90%] font-light tracking-wide">
         Kami hadir untuk memberikan transparansi dan perlindungan bagi pemain
         game di Indonesia melalui klasifikasi konten yang akurat dan berbasis
@@ -53,7 +51,6 @@ export default function AboutHero() {
         </Button>
       </div>
 
-      {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 pt-10 max-w-5xl">
         <div className="flex items-center gap-6">
           <div className="w-[4px] h-16 bg-white rounded-full opacity-90" />

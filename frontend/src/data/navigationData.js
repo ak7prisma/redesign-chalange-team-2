@@ -2,13 +2,13 @@ export const navLinks = [
   { to: '/', label: 'Beranda' },
   { to: '/tentang', label: 'Tentang' },
   { to: '/informasi-rating', label: 'Informasi Rating' },
-  { to: '/konsultasi-adiktif', label: 'Konsultasi Adiktif' },
+  { to: '/konsultasi', label: 'Konsultasi Adiktif' },
 ];
 
 export const footerQuickLinks = [
   { to: '/', label: 'Beranda' },
   { to: '/informasi-rating', label: 'Informasi Rating' },
-  { to: '/konsultasi-adiktif', label: 'Konsultasi Adiktif' },
+  { to: '/konsultasi', label: 'Konsultasi Adiktif' },
   { to: '/tentang', label: 'FAQ' },
 ];
 

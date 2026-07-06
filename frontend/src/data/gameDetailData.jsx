@@ -10,9 +10,11 @@ export const gameDetailData = {
     developer: 'Capcom',
     cover: '/re_cover.png',
     rating: '18+',
-    ageLabel: 'Remaja',
+    ageLabel: 'Dewasa',
     ratingDesc: 'Bukan untuk anak-anak. Mengandung kekerasan ekstrem, darah, horor psikologis, dan bahasa kasar.',
     tags: ['Survival Horror', 'Single Player', 'Story-Rich', 'Third-Person'],
+    platforms: ['Windows', 'PlayStation', 'Xbox'],
+    releaseDate: '1996',
 
     descriptionSections: [
       {
@@ -27,7 +29,7 @@ export const gameDetailData = {
       },
       {
         title: 'Cerita Menegangkan',
-        icon: 'group', // Kita handle secara custom di component atau ganti icon
+        icon: 'group',
         body: 'Sebuah perusahaan farmasi raksasa, Umbrella Corporation, menyebarkan virus mematikan yang mengubah manusia menjadi monster mengerikan. Hanya segelintir yang bisa mengungkap kebenaran dan menghentikan kehancuran ini sebelum terlambat.',
         updateText: 'Resident Evil 4 Remake, Village, dan RE: Verse terus membawa pengalaman baru dengan grafis memukau, mekanika modern, dan cerita yang lebih dalam.',
         image: '/re_gameplay_2.png',
@@ -38,7 +40,7 @@ export const gameDetailData = {
       {
         icon: RiTimerLine,
         title: 'Atur Waktu Layar',
-        desc: 'Batas waktu bermain hingga 1-2 jam per sesi. Pastikan anak memiliki waktu istirahat yang cukup dan aktivitas lainnya.',
+        desc: 'Batas waktu bermain hingga 1-2 jam per sesi. Pastikan anak memiliki waktu istirahat yang cukup and aktivitas lainnya.',
       },
       {
         icon: MdOutlineLock,
@@ -67,9 +69,11 @@ export const gameDetailData = {
     developer: 'TiMi Studio Group',
     cover: '/codm_cover.png',
     rating: '18+',
-    ageLabel: 'Remaja',
+    ageLabel: 'Dewasa',
     ratingDesc: 'Mengandung pertempuran militer realistis, tembak-menembak, dan konten kekerasan intens.',
     tags: ['Action', 'Shooter', 'Multiplayer', 'Battle Royale'],
+    platforms: ['Android', 'iOS'],
+    releaseDate: '2019',
 
     descriptionSections: [
       {
@@ -103,6 +107,211 @@ export const gameDetailData = {
       { src: '/codm_cover.png', alt: 'Call of Duty Mobile Screenshot 1' },
     ],
   },
+
+  'honkai-star-rail': {
+    id: 'honkai-star-rail',
+    title: 'Honkai: Star Rail',
+    developer: 'COGNOSPHERE (miHoYo)',
+    cover: '/honkai_cover.png',
+    rating: '13+',
+    ageLabel: 'Remaja',
+    ratingDesc: 'Mengandung kekerasan fiksi ringan, dialog yang cukup kompleks, serta interaksi sosial daring.',
+    tags: ['RPG', 'Strategy', 'Open World', 'Anime'],
+    platforms: ['Windows', 'PlayStation 5', 'Android', 'iOS'],
+    releaseDate: '2023',
+
+    descriptionSections: [
+      {
+        title: 'Jelajahi Galaksi Luas',
+        icon: RiCompass3Line,
+        body: 'Naik ke Astral Express dan jelajahi berbagai dunia unik di galaksi. Temui rekan baru, hadapi krisis Stellaron, dan ungkap misteri Aeon dalam pertempuran berbasis giliran (turn-based) yang taktis.',
+        checklist: [
+          'Nikmati visual berkualitas tinggi dan animasi pertempuran yang memukau.',
+          'Susun formasi tim terbaik dengan elemen dan jalur (Path) yang sinergis.',
+        ],
+        image: '/honkai_cover.png',
+      },
+    ],
+
+    parentalTips: [
+      {
+        icon: RiTimerLine,
+        title: 'Pantau Batas Waktu bermain',
+        desc: 'Sistem stamina harian membatasi progres langsung, namun pastikan anak tidak bermain larut malam.',
+      },
+      {
+        icon: MdOutlineLock,
+        title: 'Batas Transaksi Mikro',
+        desc: 'Gim ini menggunakan sistem gacha. Pastikan untuk menonaktifkan pembayaran otomatis pada perangkat anak.',
+      },
+    ],
+
+    psychNote: 'Mekanisme gacha dapat mendorong keinginan impulsif untuk berbelanja. Berikan pemahaman kepada anak mengenai nilai uang dan konsep probabilitas.',
+
+    gallery: [
+      { src: '/honkai_cover.png', alt: 'Honkai Star Rail Screenshot 1' },
+    ],
+  },
+
+  'efootball': {
+    id: 'efootball',
+    title: 'eFootball™',
+    developer: 'Konami Digital Entertainment',
+    cover: '/efootball_cover.png',
+    rating: '3+',
+    ageLabel: 'Semua Usia',
+    ratingDesc: 'Cocok untuk semua kalangan. Konten olahraga sepak bola tanpa unsur kekerasan atau bahasa kasar.',
+    tags: ['Sports', 'Simulation', 'Multiplayer', 'Soccer'],
+    platforms: ['Windows', 'PlayStation', 'Xbox', 'Android', 'iOS'],
+    releaseDate: '2021',
+
+    descriptionSections: [
+      {
+        title: 'Era Baru Sepak Bola Digital',
+        icon: RiCompass3Line,
+        body: 'Rasakan simulasi pertandingan sepak bola yang realistis dengan grafis berkualitas tinggi. Bangun tim impian Anda (Dream Team), rekrut pemain legendaris, dan tandingi pemain dari seluruh belahan dunia.',
+        checklist: [
+          'Kontrol taktis yang presisi memberikan kendali penuh atas setiap operan dan tendangan.',
+          'Pembaruan berkala berdasarkan performa pemain di dunia nyata.',
+        ],
+        image: '/efootball_cover.png',
+      },
+    ],
+
+    parentalTips: [
+      {
+        icon: RiTimerLine,
+        title: 'Bermain Bersama Keluarga',
+        desc: 'Gim olahraga sangat cocok dimainkan bersama untuk meningkatkan kebersamaan dan sportivitas.',
+      },
+    ],
+
+    psychNote: 'Kompetisi daring dapat memicu rasa frustrasi saat kalah. Ajarkan anak tentang nilai sportivitas, kolaborasi, dan bahwa kekalahan adalah bagian dari pembelajaran.',
+
+    gallery: [
+      { src: '/efootball_cover.png', alt: 'eFootball Screenshot 1' },
+    ],
+  },
+
+  'among-us': {
+    id: 'among-us',
+    title: 'Among Us',
+    developer: 'Innersloth',
+    cover: '/amongus_cover.png',
+    rating: '7+',
+    ageLabel: 'Anak',
+    ratingDesc: 'Mengandung animasi eliminasi kartun yang jenaka, serta interaksi sosial diskusi kelompok.',
+    tags: ['Social', 'Survival', 'Multiplayer', 'Casual'],
+    platforms: ['Windows', 'PlayStation', 'Xbox', 'Nintendo Switch', 'Android', 'iOS'],
+    releaseDate: '2018',
+
+    descriptionSections: [
+      {
+        title: 'Temukan sang Impostor',
+        icon: RiCompass3Line,
+        body: 'Bekerja sama dengan kru lain untuk menyelesaikan tugas pemeliharaan pesawat ruang angkasa, tetapi waspadalah terhadap Impostor di antara Anda yang berusaha mengeliminasi semua orang secara diam-diam.',
+        checklist: [
+          'Gunakan komunikasi dan logika untuk menuduh atau membela diri di ruang diskusi.',
+          'Kustomisasi karakter dengan kostum dan hewan peliharaan lucu.',
+        ],
+        image: '/amongus_cover.png',
+      },
+    ],
+
+    parentalTips: [
+      {
+        icon: RiChat3Line,
+        title: 'Gunakan Filter Percakapan',
+        desc: 'Aktifkan fitur sensor kata kasar dan batasi percakapan hanya dengan teman yang dikenal jika memungkinkan.',
+      },
+    ],
+
+    psychNote: 'Permainan ini melatih kemampuan analisis dan komunikasi, namun unsur kebohongan taktis (deduksi sosial) bisa membingungkan anak usia dini. Dampingi mereka untuk memahami konteks permainan.',
+
+    gallery: [
+      { src: '/amongus_cover.png', alt: 'Among Us Screenshot 1' },
+    ],
+  },
+
+  'the-sims-4': {
+    id: 'the-sims-4',
+    title: 'The Sims 4',
+    developer: 'Maxis / Electronic Arts',
+    cover: '/sims_cover.png',
+    rating: '13+',
+    ageLabel: 'Remaja',
+    ratingDesc: 'Mengandung simulasi kehidupan sosial, hubungan interpersonal romantis ringan, dan komedi kartun.',
+    tags: ['Simulation', 'Single Player', 'Sandbox', 'Casual'],
+    platforms: ['Windows', 'macOS', 'PlayStation 4', 'Xbox One'],
+    releaseDate: '2014',
+
+    descriptionSections: [
+      {
+        title: 'Kreativitas Tanpa Batas',
+        icon: RiCompass3Line,
+        body: 'Buat karakter unik Anda, bangun rumah impian dengan kustomisasi arsitektur yang mendalam, dan kelola kehidupan sosial serta karier karakter Anda dalam simulasi dunia yang hidup.',
+        checklist: [
+          'Rancang rumah dari pondasi hingga dekorasi interior.',
+          'Jelajahi berbagai ekspansi dunia dengan tema kehidupan yang unik.',
+        ],
+        image: '/sims_cover.png',
+      },
+    ],
+
+    parentalTips: [
+      {
+        icon: RiTimerLine,
+        title: 'Tetapkan Batasan Waktu',
+        desc: 'Gim simulasi berdurasi panjang dapat membuat anak lupa waktu. Tetapkan jadwal bermain yang konsisten.',
+      },
+    ],
+
+    psychNote: 'Mendorong ekspresi kreativitas dan pemecahan masalah sosial yang baik. Namun, pastikan anak tetap menjaga kehidupan sosial mereka di dunia nyata.',
+
+    gallery: [
+      { src: '/sims_cover.png', alt: 'The Sims 4 Screenshot 1' },
+    ],
+  },
+
+  'gta-v': {
+    id: 'gta-v',
+    title: 'Grand Theft Auto V',
+    developer: 'Rockstar North / Rockstar Games',
+    cover: '/gta_cover.png',
+    rating: '18+',
+    ageLabel: 'Dewasa',
+    ratingDesc: 'Sangat tidak cocok untuk anak-anak. Mengandung unsur kekerasan tinggi, kriminalitas, konten seksual, dan bahasa kasar ekstrem.',
+    tags: ['Action', 'Open World', 'Mature', 'Multiplayer'],
+    platforms: ['Windows', 'PlayStation', 'Xbox'],
+    releaseDate: '2013',
+
+    descriptionSections: [
+      {
+        title: 'Dunia Kriminal Los Santos',
+        icon: RiCompass3Line,
+        body: 'Jelajahi kota metropolitan Los Santos yang luas melalui kisah tiga karakter kriminal berbeda. Rencanakan perampokan besar, selesaikan misi berbahaya, dan bertualanglah di dunia terbuka paling dinamis.',
+        checklist: [
+          'Mode cerita yang sinematik dan mendalam.',
+          'GTA Online yang terus berkembang dengan berbagai misi kolaboratif.',
+        ],
+        image: '/gta_cover.png',
+      },
+    ],
+
+    parentalTips: [
+      {
+        icon: MdOutlineLock,
+        title: 'Gunakan Pengaman Orang Tua',
+        desc: 'Sangat disarankan untuk tidak membiarkan anak di bawah umur memainkan gim ini karena kontennya yang sepenuhnya dewasa.',
+      },
+    ],
+
+    psychNote: 'Visualisasi kekerasan ekstrem dan aktivitas kriminal dapat memengaruhi persepsi anak mengenai hukum dan perilaku sosial. Sangat penting untuk mematuhi rekomendasi usia 18+.',
+
+    gallery: [
+      { src: '/gta_cover.png', alt: 'GTA V Screenshot 1' },
+    ],
+  }
 };
 
 export const defaultGameDetail = gameDetailData['resident-evil'];

@@ -24,7 +24,6 @@ export default function RatingDescription({ activeTab, current }) {
           className="relative space-y-8"
         >
           <div className="flex flex-col sm:flex-row items-start gap-6">
-            {/* Rating Logo */}
             <div className="w-[120px] h-[150px] shrink-0 rounded-[1.5rem] bg-[#0c0a12] border border-white/10 p-2 flex flex-col justify-between shadow-2xl">
               <div className={`flex-1 flex items-center justify-center rounded-[1rem] ${theme.logoBg}`}>
                 <span className={`text-[2.2rem] font-black tracking-tighter leading-none ${theme.logoText}`}>

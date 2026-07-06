@@ -8,7 +8,7 @@ const navIcons = {
   '/': RiHome4Line,
   '/tentang': RiInformationLine,
   '/informasi-rating': RiBarChartLine,
-  '/konsultasi-adiktif': RiHeadphoneLine,
+  '/konsultasi': RiHeadphoneLine,
 };
 
 export default function Navbar() {
@@ -55,7 +55,6 @@ export default function Navbar() {
       >
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex items-center justify-between">
 
-          {/* Mobile */}
           <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={() => setDrawerOpen(true)}
@@ -69,12 +68,10 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop: Logo */}
           <Link to="/" className="hidden lg:flex items-center cursor-pointer">
             <img src="/IGRS.png" alt="Logo IGRS" className="h-10 md:h-12 object-contain" />
           </Link>
 
-          {/* Desktop: Menu */}
           <ul className="hidden lg:flex items-center gap-1 text-sm font-medium">
             {navLinks.map(({ to, label }) => (
               <li key={to}>
@@ -111,16 +108,15 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Auth Buttons */}
           <div className="flex items-center gap-3 text-sm font-medium">
             <Link
-              to="/login-notfound"
+              to="/masuk"
               className="px-5 py-2 md:px-8 md:py-2.5 rounded-full bg-primary-3 text-white transition-all duration-300 shadow-[0_0_15px_rgba(108,43,217,0.4)] hover:bg-primary-4 hover:shadow-[0_0_24px_rgba(139,92,246,0.6)] text-sm font-semibold"
             >
               Masuk
             </Link>
             <Link
-              to="/login-notfound"
+              to="/daftar"
               className="text-gray-300 hover:text-white transition-colors duration-300 hidden lg:block"
             >
               Daftar
@@ -129,11 +125,9 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Drawer Overlay */}
       <AnimatePresence>
         {drawerOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               key="backdrop"
               initial={{ opacity: 0 }}
@@ -144,7 +138,6 @@ export default function Navbar() {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] lg:hidden"
             />
 
-            {/* Drawer Panel */}
             <motion.div
               key="drawer"
               initial={{ x: '-100%' }}
@@ -157,7 +150,6 @@ export default function Navbar() {
                 borderRight: '1px solid rgba(255,255,255,0.08)',
               }}
             >
-              {/* Drawer Header */}
               <div className="flex items-center justify-between px-6 pt-8 pb-6">
                 <span className="text-primary-5 font-bold text-xl tracking-wide">IGRS Menu</span>
                 <button
@@ -169,7 +161,6 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Drawer Nav Links */}
               <nav className="flex-1 px-4 space-y-1 overflow-y-auto">
                 {navLinks.map(({ to, label }) => {
                   const Icon = navIcons[to] || RiHome4Line;
@@ -196,12 +187,10 @@ export default function Navbar() {
                   );
                 })}
 
-                {/* Divider */}
                 <div className="border-t border-white/8 my-4" />
 
-                {/* Daftar link */}
                 <NavLink
-                  to="/login-notfound"
+                  to="/daftar"
                   className={({ isActive }) =>
                     `flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-200 text-base font-medium ${
                       isActive
@@ -219,10 +208,9 @@ export default function Navbar() {
                 </NavLink>
               </nav>
 
-              {/* Drawer Footer */}
               <div className="px-6 py-6">
                 <Link
-                  to="/login-notfound"
+                  to="/masuk"
                   className="block w-full text-center py-3 rounded-full bg-primary-3 text-white font-semibold hover:bg-primary-4 transition-all duration-200 shadow-[0_0_15px_rgba(108,43,217,0.3)]"
                 >
                   Masuk

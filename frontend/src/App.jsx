@@ -9,6 +9,7 @@ import Games from './pages/Games';
 import GameDetail from './pages/GameDetail';
 import Contact from './pages/Contact';
 import Login from './pages/auth/Login';
+import Maintenance from './pages/Maintenance';
 
 export default function App() {
   return (
@@ -61,8 +62,11 @@ export default function App() {
           }
         />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/daftar" element={<Login />} />
+        <Route path="/login" element={<Maintenance />} />
+        <Route path="/daftar" element={<Maintenance />} />
+        <Route path="/masuk" element={<Maintenance />} />
+        <Route path="/konsultasi" element={<Maintenance />} />
+        <Route path="/daftarkan-game" element={<Maintenance />} />
 
         <Route
           path="*"

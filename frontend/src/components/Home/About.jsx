@@ -16,7 +16,6 @@ export default function About() {
         variants={fadeInUp}
         className="space-y-16"
       >
-        {/* Title & Description */}
         <div className="space-y-6">
           <h2 className="text-3xl md:text-6xl font-bold tracking-tight">
             Tentang <span className="text-primary-4 bg-gradient-to-r from-primary-5 to-primary-4 bg-clip-text text-transparent">Kami</span>
@@ -32,7 +31,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-8 md:gap-12 pt-8 max-w-3xl mx-auto">
           <div className="text-center space-y-2">
             <h4 className="text-5xl md:text-6xl font-bold text-primary-5 tracking-tight drop-shadow-[0_0_20px_rgba(215,180,255,0.2)]">

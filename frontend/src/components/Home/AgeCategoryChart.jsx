@@ -10,7 +10,6 @@ export default function AgeCategoryChart() {
 
   return (
     <section className="relative max-w-[1366px] mx-auto z-20">
-      {/* Background Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(162,89,255,0.08)_0%,transparent_65%)] pointer-events-none z-0" />
 
       <motion.div
@@ -20,7 +19,6 @@ export default function AgeCategoryChart() {
         variants={fadeInUp}
         className="space-y-5"
       >
-        {/* Header */}
         <div className="text-center space-y-4">
           <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
             Jumlah Gim Berdasarkan
@@ -33,17 +31,14 @@ export default function AgeCategoryChart() {
           </p>
         </div>
 
-        {/* Chart Card */}
         <div className="bg-white/5 backdrop-blur-md border border-white/80 rounded-[2.5rem] md:rounded-[5rem] p-5 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
           <div className="space-y-12">
             {chartData.map((item, index) => (
               <div key={index} className="flex items-center gap-6">
-                {/* Age Label */}
                 <span className="w-12 md:w-16 text-right font-bold text-xl md:text-3xl text-white select-none">
                   {item.label}
                 </span>
 
-                {/* Progress Bar */}
                 <div className="flex-1 flex items-center gap-4">
                   <motion.div
                     initial={{ width: 0 }}
@@ -60,7 +55,6 @@ export default function AgeCategoryChart() {
             ))}
           </div>
 
-          {/* X Axis Labels */}
           <div className="flex justify-between pl-12 md:pl-22 pr-0 md:pr-22 mt-6 md:mt-8 text-sm md:text-lg font-semibold text-neutral-5 select-none border-t border-white/5 pt-4">
             <span>0</span>
             <span>1000</span>
