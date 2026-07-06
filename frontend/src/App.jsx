@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout, RatingLayout, GameLayout } from './components/Layouts';
+import { Layout, RatingLayout, GamesLayout, GameLayout } from './components/Layouts';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -38,9 +38,9 @@ export default function App() {
         <Route
           path="/games"
           element={
-            <GameLayout>
+            <GamesLayout>
               <Games />
-            </GameLayout>
+            </GamesLayout>
           }
         />
         <Route
