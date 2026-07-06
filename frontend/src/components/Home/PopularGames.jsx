@@ -21,10 +21,10 @@ export default function PopularGames() {
       >
         {/* Title */}
         <div className="flex justify-between items-center px-2">
-          <h2 className="text-4xl font-bold text-white tracking-tight pl-2">
+          <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight pl-2">
             Gim Populer
           </h2>
-          <Link to="/games" className="flex items-center gap-4 text-xs font-bold tracking-widest text-neutral-5 hover:text-white transition-all cursor-pointer select-none">
+          <Link to="/games" className="flex items-center gap-2 md:gap-4 text-xs font-bold tracking-widest text-neutral-6 hover:text-white transition-all cursor-pointer select-none">
             <span className="p-3 rounded-2xl border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
               <IoFilter className="text-base text-white" />
             </span>

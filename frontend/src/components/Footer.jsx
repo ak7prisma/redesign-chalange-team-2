@@ -11,12 +11,12 @@ export default function Footer() {
         background: 'linear-gradient(to top, #0D0D18 0%, rgba(68, 68, 126, 0) 100%)'
       }}
     >
-      <div className="max-w-[1366px] mx-auto px-8">
+      <div className="max-w-[1366px] mx-auto px-4 md:px-8">
         {/* Footer Top */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
           
           {/* Logo & Socials */}
-          <div className="space-y-6">
+          <div className="col-span-2 md:col-span-1 space-y-6">
             <Link to="/">
               <h2 className="text-4xl font-bold text-white tracking-wide">
                 IGRS

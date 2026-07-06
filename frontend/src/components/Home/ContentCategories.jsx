@@ -19,7 +19,7 @@ export default function ContentCategories() {
       >
         {/* Header */}
         <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white tracking-tight">
             Kategori <span className="text-primary-5">Konten</span>
           </h2>
           <p className="text-neutral-6 text-base md:text-lg mx-auto leading-relaxed">
@@ -28,7 +28,7 @@ export default function ContentCategories() {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {contentCategories.map((cat, i) => (
             <motion.div
               key={i}

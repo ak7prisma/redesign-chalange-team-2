@@ -18,12 +18,12 @@ export default function About() {
       >
         {/* Title & Description */}
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-6xl font-bold tracking-tight">
             Tentang <span className="text-primary-4 bg-gradient-to-r from-primary-5 to-primary-4 bg-clip-text text-transparent">Kami</span>
           </h2>
           
           <div className="border-l-[3px] border-white/20 pl-6">
-            <h3 className="text-xl md:text-3xl font-base text-white tracking-wide leading-snug">
+            <h3 className="text-lg md:text-3xl font-base text-white tracking-wide leading-snug">
               IGRS atau Klasifikasi Permainan Interaktif Elektronik <span className="text-primary-6">(KPIE)</span>
             </h3>
           </div>
@@ -33,7 +33,7 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 gap-8 md:gap-12 pt-8 max-w-3xl mx-auto">
           <div className="text-center space-y-2">
             <h4 className="text-5xl md:text-6xl font-bold text-primary-5 tracking-tight drop-shadow-[0_0_20px_rgba(215,180,255,0.2)]">
               5225

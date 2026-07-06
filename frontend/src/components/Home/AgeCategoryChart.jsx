@@ -34,12 +34,12 @@ export default function AgeCategoryChart() {
         </div>
 
         {/* Chart Card */}
-        <div className="bg-white/5 backdrop-blur-md border border-white/80 rounded-[5rem] p-8 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+        <div className="bg-white/5 backdrop-blur-md border border-white/80 rounded-[2.5rem] md:rounded-[5rem] p-5 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
           <div className="space-y-12">
             {chartData.map((item, index) => (
               <div key={index} className="flex items-center gap-6">
                 {/* Age Label */}
-                <span className="w-16 text-right font-bold text-2xl md:text-3xl text-white select-none">
+                <span className="w-12 md:w-16 text-right font-bold text-xl md:text-3xl text-white select-none">
                   {item.label}
                 </span>
 
@@ -52,7 +52,7 @@ export default function AgeCategoryChart() {
                     transition={{ duration: 1.2, delay: index * 0.1, ease: "easeOut" }}
                     className="h-10 bg-gradient-to-r from-primary-6 to-primary-4 rounded-xl shadow-[0_0_15px_rgba(162,89,255,0.25)]"
                   />
-                  <span className="text-neutral-5 text-base md:text-lg font-semibold select-none whitespace-nowrap">
+                  <span className="text-neutral-5 text-sm md:text-lg font-semibold select-none whitespace-nowrap">
                     {item.value}
                   </span>
                 </div>
@@ -61,7 +61,7 @@ export default function AgeCategoryChart() {
           </div>
 
           {/* X Axis Labels */}
-          <div className="flex justify-between pl-22 pr-22 mt-8 text-lg font-semibold text-neutral-5 select-none border-t border-white/5 pt-4">
+          <div className="flex justify-between pl-12 md:pl-22 pr-0 md:pr-22 mt-6 md:mt-8 text-sm md:text-lg font-semibold text-neutral-5 select-none border-t border-white/5 pt-4">
             <span>0</span>
             <span>1000</span>
             <span>2000</span>

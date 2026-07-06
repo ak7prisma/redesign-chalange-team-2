@@ -7,7 +7,7 @@ export default function GameDetailHero({ game }) {
     <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
       
       {/* Cover Image */}
-      <div className="w-[300px] h-[400px] md:w-[340px] md:h-[460px] shrink-0 rounded-3xl overflow-hidden bg-primary-1/40 border border-white/10 shadow-2xl">
+      <div className="w-[220px] h-[300px] sm:w-[280px] sm:h-[370px] md:w-[340px] md:h-[460px] shrink-0 rounded-3xl overflow-hidden bg-primary-1/40 border border-white/10 shadow-2xl">
         <img
           src={game.cover}
           alt={`${game.title} Cover`}

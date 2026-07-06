@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col justify-center items-center">
+    <section className="relative w-full h-[80vh] min-h-[520px] md:h-[85vh] md:min-h-[600px] flex flex-col justify-center items-center">
       {/* Floating Game */}
       <div className="absolute inset-0 pointer-events-none max-w-[1440px] mx-auto w-full">
         <div className="relative w-full h-full">
@@ -38,14 +38,14 @@ export default function Hero() {
       <div className="relative z-20 text-center flex flex-col items-center w-full px-4 -mt-10">
         <motion.h1 
           initial="hidden" animate="visible" variants={fadeInUp}
-          className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-semibold mb-4 leading-[1.1] tracking-tight"
+          className="text-3xl sm:text-4xl md:text-[4rem] lg:text-[4.5rem] font-semibold mb-4 leading-[1.15] tracking-tight px-2"
         >
           Panduan Rating untuk <br /> Gamer Indonesia
         </motion.h1>
         
         <motion.p 
           initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.1 }}
-          className="text-neutral-6 mb-10 text-base md:text-lg font-base tracking-widest"
+          className="text-neutral-6 mb-7 md:mb-10 text-sm md:text-lg font-base tracking-widest px-4"
         >
           Temukan rating game yang sesuai untuk setiap pemain
         </motion.p>
@@ -53,15 +53,15 @@ export default function Hero() {
         {/* Search Bar */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          className="relative w-full max-w-[650px] flex items-center bg-white rounded-full h-[60px] shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
+          className="relative w-full max-w-[650px] flex items-center bg-white rounded-full h-[52px] md:h-[60px] shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
         >
           <input 
             type="text" 
             placeholder="Cari Game..."
-            className="flex-1 h-full bg-transparent text-gray-800 py-3 pl-8 pr-4 outline-none font-medium text-lg placeholder:text-gray-400 rounded-l-full"
+            className="flex-1 h-full bg-transparent text-gray-800 py-3 pl-5 md:pl-8 pr-4 outline-none font-medium text-base md:text-lg placeholder:text-gray-400 rounded-l-full"
           />
-          <button className="w-[75px] h-[60px] shrink-0 bg-primary-4 hover:bg-primary-3 rounded-r-full flex items-center justify-center transition-colors cursor-pointer">
-            <FiSearch className="text-white text-2xl" strokeWidth={2.5} />
+          <button className="w-[60px] md:w-[75px] h-full shrink-0 bg-primary-4 hover:bg-primary-3 rounded-r-full flex items-center justify-center transition-colors cursor-pointer">
+            <FiSearch className="text-white text-xl md:text-2xl" strokeWidth={2.5} />
           </button>
         </motion.div>
       </div>
