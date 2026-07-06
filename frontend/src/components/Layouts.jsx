@@ -43,7 +43,7 @@ export function GameLayout({ children }) {
           to="/games"
           className="inline-flex items-center gap-2 text-[#a7a2cb] font-semibold hover:text-white transition-colors duration-200 text-sm md:text-base"
         >
-          <RiArrowLeftLine /> Kembali ke Daftar Game
+          <RiArrowLeftLine /> Kembali
         </Link>
       </div>
       <main>{children}</main>
