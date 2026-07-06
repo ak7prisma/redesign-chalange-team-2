@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Rating from './pages/Rating';
 import Games from './pages/Games';
+import GameDetail from './pages/GameDetail';
 import Contact from './pages/Contact';
 import Login from './pages/auth/Login';
 
@@ -70,6 +71,14 @@ export default function App() {
           element={
             <GameLayout>
               <Games />
+            </GameLayout>
+          }
+        />
+        <Route
+          path="/games/:id"
+          element={
+            <GameLayout>
+              <GameDetail />
             </GameLayout>
           }
         />
