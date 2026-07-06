@@ -39,7 +39,7 @@ export default function GameCard({ game }) {
       <div className="p-6 pt-0 mt-auto">
         <Link
           to={`/games/${game.id}`}
-          className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-primary-3 to-primary-2 hover:from-primary-4 hover:to-primary-3 text-white font-bold text-sm tracking-wide shadow-lg hover:shadow-primary-4/20 transition-all duration-300 group/btn"
+          className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-primary-4 to-primary-2 hover:from-primary-4 hover:to-primary-3 text-white font-bold text-sm tracking-wide shadow-lg hover:shadow-primary-4/20 transition-all duration-300 group/btn"
         >
           <span>Detail Game</span>
           <RiArrowRightLine className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />

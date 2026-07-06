@@ -14,7 +14,7 @@ export default function Badge({ children, className = '', variant = 'primary' })
     "rating-7": "px-3 py-1 rounded-lg text-xs font-black bg-emerald-600/90 text-white border border-emerald-600/20",
     "rating-3": "px-3 py-1 rounded-lg text-xs font-black bg-blue-600/90 text-white border border-blue-500/20",
 
-    tag: "px-3 py-1.5 rounded-lg text-xs bg-neutral-4/30 border border-white/5 text-neutral-5",
+    tag: "px-3 py-1.5 rounded-lg text-xs bg-primary-4/10 border border-white/5 text-neutral-5",
   };
 
   const selectedVariant = variants[variant] || variants.primary;

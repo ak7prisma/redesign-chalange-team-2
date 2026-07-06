@@ -1,5 +1,7 @@
 import React from 'react';
-import { RiCompass3Line, RiFilmLine, RiTimeLine, RiLockPasswordLine, RiChat3Line } from 'react-icons/ri';
+import { HiOutlineChatAlt2 } from 'react-icons/hi';
+import { MdOutlineLock } from 'react-icons/md';
+import { RiCompass3Line, RiFilmLine, RiLockPasswordLine, RiChat3Line, RiTimerLine } from 'react-icons/ri';
 
 export const gameDetailData = {
   'resident-evil': {
@@ -25,29 +27,26 @@ export const gameDetailData = {
       },
       {
         title: 'Cerita Menegangkan',
-        icon: RiFilmLine,
+        icon: 'group', // Kita handle secara custom di component atau ganti icon
         body: 'Sebuah perusahaan farmasi raksasa, Umbrella Corporation, menyebarkan virus mematikan yang mengubah manusia menjadi monster mengerikan. Hanya segelintir yang bisa mengungkap kebenaran dan menghentikan kehancuran ini sebelum terlambat.',
-        checklist: [
-          'Umbrella Corporation menciptakan T-Virus yang mengubah manusia menjadi zombie.',
-          'Ungkap konspirasi global dan selamatkan dunia dari kehancuran biologis total.',
-        ],
+        updateText: 'Resident Evil 4 Remake, Village, dan RE: Verse terus membawa pengalaman baru dengan grafis memukau, mekanika modern, dan cerita yang lebih dalam.',
         image: '/re_gameplay_2.png',
       },
     ],
 
     parentalTips: [
       {
-        icon: RiTimeLine,
+        icon: RiTimerLine,
         title: 'Atur Waktu Layar',
         desc: 'Batas waktu bermain hingga 1-2 jam per sesi. Pastikan anak memiliki waktu istirahat yang cukup dan aktivitas lainnya.',
       },
       {
-        icon: RiLockPasswordLine,
+        icon: MdOutlineLock,
         title: 'Batas Pembayaran',
         desc: 'Gim ini mengandung kekerasan, darah, dan adegan menegangkan. Pastikan sesuai dengan usia dan kedewasaan anak sebelum dibelikan.',
       },
       {
-        icon: RiChat3Line,
+        icon: HiOutlineChatAlt2 ,
         title: 'Pantau Aktivitas Bermain',
         desc: 'Dampingi anak saat bermain dan ajak berdiskusi tentang konten gim. Dorong komunikasi agar anak merasa nyaman berbagi.',
       },
@@ -87,7 +86,7 @@ export const gameDetailData = {
 
     parentalTips: [
       {
-        icon: RiTimeLine,
+        icon: RiTimerLine,
         title: 'Atur Waktu Bermain',
         desc: 'Batasi sesi bermain maksimal 1 jam per hari pada hari sekolah.',
       },

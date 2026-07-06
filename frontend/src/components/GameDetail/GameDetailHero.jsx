@@ -21,24 +21,24 @@ export default function GameDetailHero({ game }) {
         {/* Verified Badge */}
         <div className="flex justify-center lg:justify-start">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-3/30 bg-primary-2/40 text-primary-5 text-xs font-medium">
-            <RiVerifiedBadgeFill className="w-4 h-4 text-primary-4" />
+            <RiVerifiedBadgeFill className="w-4 h-4 text-primary-5" />
             Terverifikasi KOMDIGI
           </span>
         </div>
 
         {/* Title & Developer */}
         <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-6 tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-neutral-6 tracking-wide">
             {game.title}
           </h1>
-          <p className="text-neutral-5 text-lg md:text-xl">
+          <p className="text-primary-5 text-lg md:text-xl">
             Developer: {game.developer}
           </p>
         </div>
 
         {/* Age Rating Block */}
         <div className="flex flex-col sm:flex-row items-center gap-5 pt-2 max-w-2xl mx-auto lg:mx-0">
-          <div className="w-20 h-20 shrink-0 rounded-2xl bg-primary-3 flex flex-col items-center justify-center shadow-lg p-2 leading-none">
+          <div className="w-20 h-20 shrink-0 rounded-2xl bg-gradient-to-r from-primary-4 to-primary-3 flex flex-col items-center justify-center shadow-lg p-2 leading-none">
             <span className="text-neutral-6 font-black text-2xl">{game.rating}</span>
             <span className="text-[9px] text-neutral-6 font-semibold tracking-wider mt-1 uppercase">{game.ageLabel}</span>
           </div>

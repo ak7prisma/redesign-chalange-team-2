@@ -1,10 +1,10 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import { IoCheckboxOutline } from 'react-icons/io5';
-import { BsPatchCheck, BsPatchCheckFill } from 'react-icons/bs';
 import { MdAppShortcut } from 'react-icons/md';
 import { BiCategoryAlt } from 'react-icons/bi';
 import { ratingTheme } from '../../data/ratingData';
+import { RiVerifiedBadgeFill } from 'react-icons/ri';
 
 export default function RatingDescription({ activeTab, current }) {
   const theme = ratingTheme[activeTab] || ratingTheme['18'];
@@ -44,7 +44,7 @@ export default function RatingDescription({ activeTab, current }) {
       </div>
 
       <div className="flex items-center gap-3.5 bg-[#2C7FEB]/10 border border-white/50 rounded-xl p-4">
-        <BsPatchCheckFill className='text-2xl mt-0.5' />
+        <RiVerifiedBadgeFill className='text-2xl mt-0.5' />
         <p className="text-[#c8c5e0] text-sm font-medium leading-relaxed">
           {current.alertText}
         </p>

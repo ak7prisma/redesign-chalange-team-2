@@ -14,11 +14,12 @@ export default function GameDetailDescription({ game }) {
           <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
             {isEven ? (
               <>
-                <DescriptionCard
+                 <DescriptionCard
                   title={section.title}
                   icon={section.icon}
                   body={section.body}
                   checklist={section.checklist}
+                  updateText={section.updateText}
                 />
                 <div className="rounded-3xl overflow-hidden shadow-2xl h-[400px]">
                   <img
@@ -42,6 +43,7 @@ export default function GameDetailDescription({ game }) {
                   icon={section.icon}
                   body={section.body}
                   checklist={section.checklist}
+                  updateText={section.updateText}
                 />
               </>
             )}

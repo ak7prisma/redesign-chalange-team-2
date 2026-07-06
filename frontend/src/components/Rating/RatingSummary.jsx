@@ -3,6 +3,7 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { statusColorMap, ratingTheme } from '../../data/ratingData';
 import { BiCategoryAlt } from 'react-icons/bi';
 import { categoryConfig } from '../../data/homeData';
+import { RiVerifiedBadgeFill } from 'react-icons/ri';
 
 export default function RatingSummary({ activeTab, current }) {
   const theme = ratingTheme[activeTab] || ratingTheme['18'];
@@ -51,9 +52,7 @@ export default function RatingSummary({ activeTab, current }) {
       </div>
 
       <div className={`flex items-start gap-3 border rounded-xl p-4 transition-all duration-300 ${theme.warningStyles}`}>
-        <span className={`w-5 h-5 rounded-full border flex items-center justify-center text-xs shrink-0 mt-0.5 select-none transition-all duration-300 ${theme.warningCheckColor}`}>
-          ✓
-        </span>
+        <RiVerifiedBadgeFill className='text-5xl mt-0.5' />
         <p className="text-xs leading-relaxed">
           {current.warningAlert}
         </p>

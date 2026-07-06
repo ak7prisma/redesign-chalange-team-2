@@ -16,13 +16,13 @@ export default function GamesHeader() {
 
       {/* Filters */}
       <div className="flex flex-wrap items-center justify-center gap-4">
-        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-neutral-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
-          <RiFilter3Line className="w-5 h-5 text-primary-4" />
+        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
+          <RiFilter3Line className="w-5 h-5" />
           <span className="font-semibold text-sm">Filter Kategori</span>
         </button>
 
-        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-neutral-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
-          <RiArrowUpDownLine className="w-5 h-5 text-primary-4" />
+        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
+          <RiArrowUpDownLine className="w-5 h-5" />
           <span className="font-semibold text-sm">Urutkan: Terbaru</span>
         </button>
       </div>
