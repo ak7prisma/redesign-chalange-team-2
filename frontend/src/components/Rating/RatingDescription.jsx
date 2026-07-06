@@ -1,57 +1,64 @@
 import React from 'react';
 import Badge from '../ui/Badge';
+import { IoCheckboxOutline } from 'react-icons/io5';
+import { BsPatchCheck, BsPatchCheckFill } from 'react-icons/bs';
+import { MdAppShortcut } from 'react-icons/md';
+import { BiCategoryAlt } from 'react-icons/bi';
+import { ratingTheme } from '../../data/ratingData';
 
 export default function RatingDescription({ activeTab, current }) {
+  const theme = ratingTheme[activeTab] || ratingTheme['18'];
+
   return (
-    <div className="lg:col-span-7 bg-[#1c182c]/80 border border-white/10 rounded-3xl p-6 md:p-10 space-y-8 backdrop-blur-xl shadow-2xl">
-      
+    <div className="relative lg:col-span-7 bg-white/5 border border-white/50 rounded-[2rem] p-8 md:p-12 backdrop-blur-xl overflow-hidden shadow-2xl">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.1)_0%,transparent_60%)] pointer-events-none" />
+      <div className="relative space-y-8">
+
       <div className="flex flex-col sm:flex-row items-start gap-6">
-        <div className={`w-28 h-36 shrink-0 rounded-3xl ${current.logoBgColor} border border-white/10 flex flex-col overflow-hidden shadow-2xl`}>
-          <div className={`flex-1 ${current.logoInnerColor} flex items-center justify-center rounded-t-3xl rounded-b-[1.8rem] px-2 py-4`}>
-            <span className={`text-[2.5rem] font-extrabold tracking-tighter leading-none ${current.logoTextColor}`}>
+        {/* Rating Logo */}
+        <div className="w-[120px] h-[150px] shrink-0 rounded-[1.5rem] bg-[#0c0a12] border border-white/10 p-2 flex flex-col justify-between shadow-2xl">
+          <div className={`flex-1 flex items-center justify-center rounded-[1rem] ${theme.logoBg}`}>
+            <span className={`text-[2.2rem] font-black tracking-tighter leading-none ${theme.logoText}`}>
               {activeTab}+
             </span>
           </div>
-          <div className="h-10 flex items-center justify-center">
-            <span className="text-white text-[15px] font-bold tracking-widest">
+          <div className="h-8 flex items-center justify-center">
+            <span className="text-white text-lg font-bold tracking-widest uppercase">
               IGRS
             </span>
           </div>
         </div>
 
-        <div className="space-y-3">
-          <Badge className={current.badgeColor} variant="outline">
-            ✓ {current.badge}
-          </Badge>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
+        <div className="space-y-4">
+          <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider select-none ${theme.badgeCls}`}>
+            <IoCheckboxOutline className="text-xl" />
+            {current.badge}
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-white">
             {current.title}
           </h2>
-          <p className="text-neutral-5 text-sm md:text-base leading-relaxed">
+          <p className="text-neutral-6 text-sm md:text-base leading-relaxed">
             {current.subtitle}
           </p>
         </div>
       </div>
 
-      <div className="flex items-center gap-3.5 bg-[#2C7FEB]/10 border border-[#2C7FEB]/20 rounded-xl p-4">
-        <span className="w-5 h-5 rounded-full bg-[#2C7FEB]/15 border border-[#2C7FEB]/20 flex items-center justify-center text-xs shrink-0 select-none">
-          ✓
-        </span>
+      <div className="flex items-center gap-3.5 bg-[#2C7FEB]/10 border border-white/50 rounded-xl p-4">
+        <BsPatchCheckFill className='text-2xl mt-0.5' />
         <p className="text-[#c8c5e0] text-sm font-medium leading-relaxed">
           {current.alertText}
         </p>
       </div>
 
       <div className="space-y-5">
-        <h3 className="text-lg md:text-xl font-bold text-white tracking-wide">
-          㗊 {current.criteriaTitle}
+        <h3 className="text-lg md:text-xl font-bold text-white tracking-wide flex items-center gap-2">
+          <BiCategoryAlt className='text-2xl mt-0.5' /> {current.criteriaTitle}
         </h3>
         <ul className="space-y-4">
           {current.criteriaList.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-3.5">
-              <span className="w-5 h-5 rounded-md border border-white/20 bg-white/5 flex items-center justify-center text-xs text-primary-5 mt-0.5 shrink-0 select-none">
-                ✓
-              </span>
-              <p className="text-neutral-5 text-sm md:text-[14px] leading-relaxed">
+            <li key={idx} className="flex items-start gap-3.5 text-neutral-6">
+              <IoCheckboxOutline className="text-xl shrink-0 mt-0.5" />
+              <p className="text-sm md:text-[14px] leading-relaxed">
                 {item}
               </p>
             </li>
@@ -59,6 +66,7 @@ export default function RatingDescription({ activeTab, current }) {
         </ul>
       </div>
 
+      </div>
     </div>
   );
 }

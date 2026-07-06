@@ -10,7 +10,7 @@ export default function Rating() {
 
   return (
     <div className="relative z-20 min-h-screen text-white font-sans selection:bg-primary-4 selection:text-white">
-      <div className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-8">
+      <div className="max-w-[1366px] mx-auto px-3 md:px-7 pt-12 space-y-5">
         
         <RatingNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
 

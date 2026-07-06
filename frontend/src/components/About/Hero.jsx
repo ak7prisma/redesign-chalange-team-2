@@ -24,13 +24,13 @@ export default function AboutHero() {
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-semibold text-white leading-relaxed max-w-4xl tracking-wide">
+      <h1 className="text-3xl md:text-4xl font-base text-white leading-relaxed">
         Membangun Ekosistem Digital yang{' '}
         <span className="text-primary-4">Aman dan Terpercaya</span>
       </h1>
 
       {/* Deskripsi */}
-      <p className="text-neutral-5 text-lg md:text-[1.25rem] leading-relaxed max-w-[90%] font-light tracking-wide">
+      <p className="text-neutral-6 text-lg md:text-2xl leading-relaxed max-w-[90%] font-light tracking-wide">
         Kami hadir untuk memberikan transparansi dan perlindungan bagi pemain
         game di Indonesia melalui klasifikasi konten yang akurat dan berbasis
         regulasi pemerintah.

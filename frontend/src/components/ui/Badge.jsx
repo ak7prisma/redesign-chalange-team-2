@@ -11,8 +11,8 @@ export default function Badge({ children, className = '', variant = 'primary' })
     "rating-18": "px-3 py-1 rounded-lg text-xs font-black bg-red-600/90 text-white border border-red-500/20",
     "rating-15": "px-3 py-1 rounded-lg text-xs font-black bg-orange-500/90 text-white border border-orange-400/20",
     "rating-13": "px-3 py-1 rounded-lg text-xs font-black bg-amber-500/90 text-white border border-amber-400/20",
-    "rating-7":  "px-3 py-1 rounded-lg text-xs font-black bg-emerald-600/90 text-white border border-emerald-500/20",
-    "rating-3":  "px-3 py-1 rounded-lg text-xs font-black bg-blue-600/90 text-white border border-blue-500/20",
+    "rating-7": "px-3 py-1 rounded-lg text-xs font-black bg-emerald-600/90 text-white border border-emerald-600/20",
+    "rating-3": "px-3 py-1 rounded-lg text-xs font-black bg-blue-600/90 text-white border border-blue-500/20",
 
     tag: "px-3 py-1.5 rounded-lg text-xs bg-neutral-4/30 border border-white/5 text-neutral-5",
   };

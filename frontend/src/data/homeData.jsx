@@ -13,48 +13,22 @@ export const chartData = [
   { label: '7+', value: 17, percentage: 1.5 },
 ];
 
-export const contentCategories = [
-  {
-    icon: <IoSkullOutline className="text-primary-5 text-3xl" />,
-    title: "Horor",
-    desc: "Unsur ketakutan, ketegangan psikologis, dan elemen supranatural."
-  },
-  {
-    icon: <LuSwords className="text-primary-6 text-3xl" />,
-    title: "Kekerasan",
-    desc: "Penggunaan senjata, kontak fisik, dan visualisasi pertarungan."
-  },
-  {
-    icon: <PiGlobeHemisphereWestFill className="text-cyan-400 text-3xl" />,
-    title: "Interaksi Daring",
-    desc: "Fitur chat, komunitas terbuka, dan transaksi dalam aplikasi."
-  },
-  {
-    icon: <MdOutlineBloodtype className="text-red-300 text-3xl" />,
-    title: "Darah & Mutilasi",
-    desc: "Visualisasi luka, organ tubuh, dan efek darah realistis."
-  },
-  {
-    icon: <MdOutlineFace6 className="text-primary-5 text-3xl" />,
-    title: "Penampilan Tokoh",
-    desc: "Desain karakter, pakaian, dan estetika visual permainan."
-  },
-  {
-    icon: <MdOutlineWineBar className="text-primary-6 text-3xl" />,
-    title: "Rokok & Alkohol",
-    desc: "Referensi atau penggunaan zat adiktif dalam alur cerita."
-  },
-  {
-    icon: <BiMessageX className="text-cyan-400 text-3xl" />,
-    title: "Bahasa Kasar",
-    desc: "Penggunaan kata-kata kasar, umpatan, atau istilah tidak pantas."
-  },
-  {
-    icon: <BiDice5 className="text-red-300 text-3xl" />,
-    title: "Simulasi Judi",
-    desc: "Elemen taruhan atau permainan yang menyerupai perjudian."
-  }
+export const categoryConfig = [
+  { name: 'Horor',          Icon: IoSkullOutline,           color: 'text-primary-5', desc: 'Unsur ketakutan, ketegangan psikologis, dan elemen supranatural.' },
+  { name: 'Kekerasan',      Icon: LuSwords,                 color: 'text-primary-6', desc: 'Penggunaan senjata, kontak fisik, dan visualisasi pertarungan.' },
+  { name: 'Interaksi Daring', Icon: PiGlobeHemisphereWestFill, color: 'text-cyan-400', desc: 'Fitur chat, komunitas terbuka, dan transaksi dalam aplikasi.' },
+  { name: 'Darah & Mutilasi', Icon: MdOutlineBloodtype,    color: 'text-red-300',   desc: 'Visualisasi luka, organ tubuh, dan efek darah realistis.' },
+  { name: 'Penampilan Tokoh', Icon: MdOutlineFace6,        color: 'text-primary-5', desc: 'Desain karakter, pakaian, dan estetika visual permainan.' },
+  { name: 'Rokok & Alkohol', Icon: MdOutlineWineBar,       color: 'text-primary-6', desc: 'Referensi atau penggunaan zat adiktif dalam alur cerita.' },
+  { name: 'Bahasa Kasar',   Icon: BiMessageX,              color: 'text-cyan-400',  desc: 'Penggunaan kata-kata kasar, umpatan, atau istilah tidak pantas.' },
+  { name: 'Simulasi Judi',  Icon: BiDice5,                 color: 'text-red-300',   desc: 'Elemen taruhan atau permainan yang menyerupai perjudian.' },
 ];
+
+export const contentCategories = categoryConfig.map(({ name, Icon, color, desc }) => ({
+  icon: <Icon className={`${color} text-3xl`} />,
+  title: name,
+  desc,
+}));
 
 export const newsData = [
   {
