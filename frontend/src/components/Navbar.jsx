@@ -95,13 +95,13 @@ export default function Navbar() {
           {/* Auth Buttons */}
           <div className="flex items-center gap-3 text-sm font-medium">
             <Link
-              to="/login"
+              to="/login-notfound"
               className="px-5 py-2 md:px-8 md:py-2.5 rounded-full bg-primary-3 text-white transition-all duration-300 shadow-[0_0_15px_rgba(108,43,217,0.4)] hover:bg-primary-4 hover:shadow-[0_0_24px_rgba(139,92,246,0.6)] text-sm font-semibold"
             >
               Masuk
             </Link>
             <Link
-              to="/daftar"
+              to="/login-notfound"
               className="text-gray-300 hover:text-white transition-colors duration-300 hidden lg:block"
             >
               Daftar
@@ -182,7 +182,7 @@ export default function Navbar() {
 
                 {/* Daftar link */}
                 <NavLink
-                  to="/daftar"
+                  to="/login-notfound"
                   className={({ isActive }) =>
                     `flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-200 text-base font-medium ${
                       isActive
@@ -203,7 +203,7 @@ export default function Navbar() {
               {/* Drawer Footer */}
               <div className="px-6 py-6">
                 <Link
-                  to="/login"
+                  to="/login-notfound"
                   className="block w-full text-center py-3 rounded-full bg-primary-3 text-white font-semibold hover:bg-primary-4 transition-all duration-200 shadow-[0_0_15px_rgba(108,43,217,0.3)]"
                 >
                   Masuk

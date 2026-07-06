@@ -15,15 +15,15 @@ export default function GamesHeader() {
       </div>
 
       {/* Filters */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
-          <RiFilter3Line className="w-5 h-5" />
-          <span className="font-semibold text-sm">Filter Kategori</span>
+      <div className="flex items-center justify-between gap-4 w-full max-w-xl mx-auto px-2">
+        <button className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer flex-1 text-center">
+          <RiFilter3Line className="w-5 h-5 shrink-0" />
+          <span className="font-semibold text-xs md:text-sm">Filter Kategori</span>
         </button>
 
-        <button className="flex items-center gap-2.5 px-6 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
-          <RiArrowUpDownLine className="w-5 h-5" />
-          <span className="font-semibold text-sm">Urutkan: Terbaru</span>
+        <button className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-neutral-4/30 border border-white/10 hover:border-primary-4/50 text-primary-5 hover:text-white transition-all duration-300 shadow-lg cursor-pointer flex-1 text-center">
+          <RiArrowUpDownLine className="w-5 h-5 shrink-0" />
+          <span className="font-semibold text-xs md:text-sm">Urutkan: Terbaru</span>
         </button>
       </div>
     </div>

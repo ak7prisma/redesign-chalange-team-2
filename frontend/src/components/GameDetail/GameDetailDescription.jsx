@@ -21,7 +21,7 @@ export default function GameDetailDescription({ game }) {
                   checklist={section.checklist}
                   updateText={section.updateText}
                 />
-                <div className="rounded-3xl overflow-hidden shadow-2xl h-[400px]">
+                <div className="rounded-3xl overflow-hidden shadow-2xl h-[200px] md:h-[400px]">
                   <img
                     src={section.image}
                     alt={section.title}
@@ -31,7 +31,7 @@ export default function GameDetailDescription({ game }) {
               </>
             ) : (
               <>
-                <div className="rounded-3xl overflow-hidden shadow-2xl h-[400px]">
+                <div className="rounded-3xl overflow-hidden shadow-2xl h-[200px] md:h-[400px]">
                   <img
                     src={section.image}
                     alt={section.title}

@@ -21,28 +21,28 @@ export default function GameCard({ game }) {
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-4">
-          <h3 className="text-xl md:text-2xl font-bold tracking-wide text-neutral-6 group-hover:text-primary-4 transition-colors duration-300">
+        <div className="p-3 md:p-6 space-y-2 md:space-y-4">
+          <h3 className="text-sm md:text-2xl font-bold tracking-wide text-neutral-6 group-hover:text-primary-4 transition-colors duration-300 line-clamp-1">
             {game.title}
           </h3>
 
           {/* Genre Tags */}
-          <div className="flex flex-wrap gap-2">
-            {game.tags.map((tag) => (
-              <Badge key={tag} variant="tag">{tag}</Badge>
+          <div className="flex flex-wrap gap-1.5 md:gap-2">
+            {game.tags.slice(0, 2).map((tag) => (
+              <Badge key={tag} variant="tag" className="text-[9px] md:text-xs px-1.5 py-0.5 md:px-3 md:py-1.5">{tag}</Badge>
             ))}
           </div>
         </div>
       </div>
 
       {/* Action Button */}
-      <div className="p-6 pt-0 mt-auto">
+      <div className="p-3 md:p-6 pt-0 mt-auto">
         <Link
           to={`/games/${game.id}`}
-          className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-primary-4 to-primary-2 hover:from-primary-4 hover:to-primary-3 text-white font-bold text-sm tracking-wide shadow-lg hover:shadow-primary-4/20 transition-all duration-300 group/btn"
+          className="flex items-center justify-center gap-1.5 md:gap-2 w-full py-2 md:py-3.5 rounded-xl bg-gradient-to-r from-primary-4 to-primary-2 hover:from-primary-4 hover:to-primary-3 text-white font-bold text-[10px] md:text-sm tracking-wide shadow-lg hover:shadow-primary-4/20 transition-all duration-300 group/btn"
         >
           <span>Detail Game</span>
-          <RiArrowRightLine className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+          <RiArrowRightLine className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
         </Link>
       </div>
     </div>

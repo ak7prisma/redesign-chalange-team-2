@@ -33,7 +33,7 @@ export default function PopularGames() {
         </div>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {popularGamesData.map((game, i) => (
             <motion.div
               key={i}
@@ -42,12 +42,12 @@ export default function PopularGames() {
               viewport={{ once: true }}
               variants={fadeInUp}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-[2rem] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.25)] flex flex-col justify-between h-full hover:scale-[1.02] transition-transform duration-300 group"
+              className="bg-white rounded-2xl md:rounded-[2rem] p-2.5 md:p-4 shadow-[0_20px_40px_rgba(0,0,0,0.25)] flex flex-col justify-between h-full hover:scale-[1.02] transition-transform duration-300 group"
             >
               {/* Card Content Wrapper */}
               <div>
                 {/* Image Container */}
-                <div className="relative w-full aspect-square rounded-[1.5rem] overflow-hidden bg-gray-100">
+                <div className="relative w-full aspect-square rounded-xl md:rounded-[1.5rem] overflow-hidden bg-gray-100">
                   <img
                     src={game.img}
                     alt={game.title}
@@ -56,22 +56,22 @@ export default function PopularGames() {
                 </div>
 
                 {/* Text Details */}
-                <div className="mt-5 px-1">
-                  <h3 className="text-2xl font-bold text-[#0D0A14] tracking-tight line-clamp-1">
+                <div className="mt-3 md:mt-5 px-1">
+                  <h3 className="text-sm md:text-2xl font-bold text-[#0D0A14] tracking-tight line-clamp-1">
                     {game.title}
                   </h3>
-                  <p className="text-[#6B6B7A] text-sm leading-relaxed mt-2 line-clamp-2">
+                  <p className="text-[#6B6B7A] text-[10px] md:text-sm leading-relaxed mt-1 md:mt-2 line-clamp-2">
                     {game.desc}
                   </p>
                 </div>
               </div>
 
               {/* Card Footer */}
-              <div className="mt-6 flex justify-between items-center px-1">
-                <span className="text-[#A0A0B3] text-xs font-semibold cursor-pointer group-hover:text-primary-4 transition-colors">
+              <div className="mt-4 md:mt-6 flex justify-between items-center px-1">
+                <span className="text-[#A0A0B3] text-[9px] md:text-xs font-semibold cursor-pointer group-hover:text-primary-4 transition-colors">
                   Selengkapnya →
                 </span>
-                <span className={`text-white text-sm font-bold px-4 py-1.5 rounded-full select-none ${game.badgeColor}`}>
+                <span className={`text-white text-[9px] md:text-sm font-bold px-2.5 py-1 md:px-4 md:py-1.5 rounded-full select-none ${game.badgeColor}`}>
                   {game.rating}
                 </span>
               </div>
