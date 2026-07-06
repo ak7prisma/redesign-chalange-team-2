@@ -1,13 +1,61 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Rating {
+  id          Int    @id @default(autoincrement())
+  code        String
+  description String
+  games       Game[]
+}
+
+model Platform {
+  id    Int    @id @default(autoincrement())
+  name  String
+  games Game[]
+}
+
+model Genre {
+  id    Int    @id @default(autoincrement())
+  name  String // Contoh: "RPG", "MOBA", "Action"
+  games Game[]
+}
+
+model Game {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  developer   String
+  publisher   String
+  releaseDate String
+  logoUrl     String
+  galleryUrls String
+
+  evolutionTitle String
+  evolutionDesc  String
+
+  tipsWaktuLayarTitle String
+  tipsWaktuLayarDesc  String
+
+  tipsPembayaranTitle String
+  tipsPembayaranDesc  String
+
+  tipsFiturChatTitle String?
+  tipsFiturChatDesc  String?
+
+  tipsInteraksiTitle String?
+  tipsInteraksiDesc  String?
+
+  saranPsikologis String
+
+  ratingId Int?
+  rating   Rating? @relation(fields: [ratingId], references: [id])
+
+  platforms Platform[]
+  genres    Genre[]
 }
