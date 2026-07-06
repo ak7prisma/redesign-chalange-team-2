@@ -8,7 +8,7 @@ export default function GameDetailDescription({ game }) {
         Deskripsi <span className="text-primary-4">Gim</span>
       </h2>
 
-      {game.descriptionSections.map((section, idx) => {
+      {(game.descriptionSections ?? []).map((section, idx) => {
         const isEven = idx % 2 === 0;
         return (
           <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">

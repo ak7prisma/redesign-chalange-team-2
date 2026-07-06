@@ -61,7 +61,7 @@ export default function News() {
                   <h3 className="text-xl font-semibold text-primary-5 leading-snug tracking-wide group-hover:text-primary-6 transition-colors line-clamp-2">
                     {news.title}
                   </h3>
-                  <p className="text-neutral-5\6 text-lg leading-relaxed line-clamp-3">
+                  <p className="text-neutral-5 text-lg leading-relaxed line-clamp-3">
                     {news.desc}
                   </p>
                 </div>

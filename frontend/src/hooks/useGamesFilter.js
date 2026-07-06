@@ -1,11 +1,15 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { gamesData } from '../data/gamesData';
+import { apiConfig } from '../config/api';
+import { fetchGames } from '../api/gamesApi';
 
 const ITEMS_PER_PAGE = 6;
 
 export function useGamesFilter() {
   const [searchParams] = useSearchParams();
+  const [games, setGames] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [selectedRating, setSelectedRating] = useState('Semua');
@@ -14,19 +18,49 @@ export function useGamesFilter() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    let cancelled = false;
+
+    async function loadGames() {
+      if (!apiConfig.isEnabled) {
+        setError('API belum diaktifkan. Set VITE_ENABLE_API=true di .env.local');
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const data = await fetchGames();
+        if (!cancelled) setGames(data);
+      } catch (err) {
+        if (!cancelled) {
+          setError(err.message ?? 'Gagal memuat data game');
+          setGames([]);
+        }
+      } finally {
+        if (!cancelled) setIsLoading(false);
+      }
+    }
+
+    loadGames();
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
     setSearchQuery(searchParams.get('q') || '');
     setCurrentPage(1);
   }, [searchParams]);
 
   const filteredGames = useMemo(() => {
-    let result = [...gamesData];
+    let result = [...games];
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
         (g) =>
           g.title.toLowerCase().includes(q) ||
-          g.tags.some((t) => t.toLowerCase().includes(q))
+          g.tags?.some((t) => t.toLowerCase().includes(q))
       );
     }
 
@@ -41,7 +75,7 @@ export function useGamesFilter() {
     }
 
     return result;
-  }, [searchQuery, selectedRating, sortOrder]);
+  }, [games, searchQuery, selectedRating, sortOrder]);
 
   const totalPages = Math.ceil(filteredGames.length / ITEMS_PER_PAGE);
 
@@ -76,6 +110,8 @@ export function useGamesFilter() {
     filteredGames,
     paginatedGames,
     totalPages,
+    isLoading,
+    error,
     handleSearchChange,
     handleRatingChange,
     handleSortChange,

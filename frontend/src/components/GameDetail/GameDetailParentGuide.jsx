@@ -25,7 +25,7 @@ export default function GameDetailParentGuide({ game }) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch pt-4">
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-neutral-6 mb-4">Tips Pengawasan</h3>
-          {game.parentalTips.map((tip, idx) => (
+          {(game.parentalTips ?? []).map((tip, idx) => (
             <TipCard key={idx} icon={tip.icon} title={tip.title} desc={tip.desc} />
           ))}
         </div>

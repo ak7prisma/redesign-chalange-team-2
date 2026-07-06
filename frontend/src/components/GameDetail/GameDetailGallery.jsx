@@ -7,7 +7,7 @@ export default function GameDetailGallery({ game }) {
         Galeri Cuplikan Gim
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {game.gallery.map((img, idx) => (
+        {(game.gallery ?? []).map((img, idx) => (
           <img
             key={idx}
             src={img.src}

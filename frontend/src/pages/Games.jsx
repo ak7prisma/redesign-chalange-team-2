@@ -14,6 +14,8 @@ export default function Games() {
     filteredGames,
     paginatedGames,
     totalPages,
+    isLoading,
+    error,
     handleSearchChange,
     handleRatingChange,
     handleSortChange,
@@ -40,7 +42,18 @@ export default function Games() {
           onToggleFilter={toggleFilterPanel}
         />
 
-        {filteredGames.length === 0 ? (
+        {isLoading ? (
+          <div className="flex flex-col items-center justify-center py-24 space-y-4 text-center">
+            <div className="w-10 h-10 border-2 border-primary-4 border-t-transparent rounded-full animate-spin" />
+            <p className="text-neutral-5">Memuat data game...</p>
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center py-24 space-y-4 text-center">
+            <span className="text-6xl">⚠️</span>
+            <h3 className="text-2xl font-bold text-white">Gagal memuat data</h3>
+            <p className="text-neutral-5 max-w-md">{error}</p>
+          </div>
+        ) : filteredGames.length === 0 ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

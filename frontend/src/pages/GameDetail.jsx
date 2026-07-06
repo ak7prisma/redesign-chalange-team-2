@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { gameDetailData, defaultGameDetail } from '../data/gameDetailData';
+import { useGameDetail } from '../hooks/useGameDetail';
 import GameDetailHero from '../components/GameDetail/GameDetailHero';
 import GameDetailDescription from '../components/GameDetail/GameDetailDescription';
 import GameDetailParentGuide from '../components/GameDetail/GameDetailParentGuide';
@@ -11,10 +11,8 @@ const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.12
-    }
-  }
+    transition: { staggerChildren: 0.12 },
+  },
 };
 
 const itemVariants = {
@@ -22,17 +20,36 @@ const itemVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 120,
-      damping: 20
-    }
-  }
+    transition: { type: 'spring', stiffness: 120, damping: 20 },
+  },
 };
 
 export default function GameDetail() {
   const { id } = useParams();
-  const game = gameDetailData[id] || defaultGameDetail;
+  const { game, isLoading, error } = useGameDetail(id);
+
+  if (isLoading) {
+    return (
+      <div className="relative z-20 min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="w-10 h-10 border-2 border-primary-4 border-t-transparent rounded-full animate-spin mx-auto" />
+          <p className="text-neutral-5">Memuat detail game...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !game.title) {
+    return (
+      <div className="relative z-20 min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <span className="text-6xl">⚠️</span>
+          <h1 className="text-2xl font-bold text-white">Gagal memuat game</h1>
+          <p className="text-neutral-5">{error ?? 'Game tidak ditemukan'}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative z-20 min-h-screen text-neutral-6 font-sans">

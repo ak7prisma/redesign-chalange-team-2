@@ -23,7 +23,7 @@ export default function AgeCategoryChart() {
           <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
             Jumlah Gim Berdasarkan
           </h3>
-          <h4 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-6 to-primary-5 bg-clip-text text-transparent tracking-tight">
+          <h4 className="text-4xl py-2 md:text-5xl font-bold bg-gradient-to-r from-primary-6 to-primary-5 bg-clip-text text-transparent tracking-tight">
             Kategori Usia
           </h4>
           <p className="text-neutral-6 text-sm md:text-base font-normal tracking-wide">

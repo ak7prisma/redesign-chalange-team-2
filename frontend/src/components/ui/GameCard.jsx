@@ -42,7 +42,7 @@ export default function GameCard({ game }) {
           </h3>
 
           <div className="flex flex-wrap gap-1.5 md:gap-2">
-            {game.tags.slice(0, 2).map((tag) => (
+            {game.tags?.slice(0, 2).map((tag) => (
               <Badge key={tag} variant="tag" className="text-[9px] md:text-xs px-1.5 py-0.5 md:px-3 md:py-1.5">{tag}</Badge>
             ))}
           </div>
