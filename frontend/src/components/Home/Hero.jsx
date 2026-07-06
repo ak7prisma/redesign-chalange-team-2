@@ -1,28 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiSearch } from 'react-icons/fi';
+import { floatingIcons } from '../../data/homeExtraData';
 
 export default function Hero() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
-
-  const floatingIcons = [
-    // --- KIRI ---
-    { id: 1, src: "", alt: "Genshin", className: "top-[5%] left-[-4%] w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-[2.5rem] -translate-x-[20%]" },
-    { id: 2, src: "", alt: "Roblox", className: "top-[43%] left-[11%] w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-[1.2rem] " },
-    { id: 3, src: "", alt: "MLBB", className: "top-[53%] left-[-3%] w-[130px] h-[130px] md:w-[150px] md:h-[150px] rounded-[2rem] -translate-x-[30%]" },
-    { id: 4, src: "", alt: "Neko Kiri", className: "bottom-[7%] left-[7%] w-[90px] h-[90px] md:w-[110px] md:h-[110px] rounded-[1.5rem]" },
-    { id: 5, src: "", alt: "Among Us", className: "bottom-[-5%] left-[-4%] w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-[2rem] -translate-x-[30%]" },
-    
-    // --- KANAN ---
-    { id: 6, src: "", alt: "Outlast", className: "top-[2%] right-[-2%] w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-[2rem] translate-x-[20%]" },
-    { id: 7, src: "", alt: "PUBG", className: "top-[20%] right-[13%] w-[70px] h-[70px] md:w-[85px] md:h-[85px] rounded-2xl" },
-    { id: 8, src: "", alt: "CoC", className: "top-[32%] right-[0%] w-[220px] h-[220px] md:w-[270px] md:h-[270px] rounded-[3.5rem] translate-x-[35%]" },
-    { id: 9, src: "", alt: "Neko Kanan", className: "bottom-[7%] right-[12%] w-[70px] h-[70px] md:w-[85px] md:h-[85px] rounded-[1.2rem]" },
-    { id: 10, src: "", alt: "Resident Evil", className: "bottom-[-13%] right-[0%] w-[140px] h-[140px] md:w-[170px] md:h-[170px] rounded-[2rem] translate-x-[20%]" },
-  ];
 
   return (
     <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col justify-center items-center">
@@ -53,14 +38,14 @@ export default function Hero() {
       <div className="relative z-20 text-center flex flex-col items-center w-full px-4 -mt-10">
         <motion.h1 
           initial="hidden" animate="visible" variants={fadeInUp}
-          className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-bold mb-4 leading-[1.1] tracking-tight"
+          className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-semibold mb-4 leading-[1.1] tracking-tight"
         >
           Panduan Rating untuk <br /> Gamer Indonesia
         </motion.h1>
         
         <motion.p 
           initial="hidden" animate="visible" variants={fadeInUp} transition={{ delay: 0.1 }}
-          className="text-neutral-5 mb-10 text-base md:text-lg font-medium tracking-wide"
+          className="text-neutral-6 mb-10 text-base md:text-lg font-base tracking-widest"
         >
           Temukan rating game yang sesuai untuk setiap pemain
         </motion.p>

@@ -1,42 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { popularGamesData } from '../../data/homeExtraData';
 
 export default function PopularGames() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
-
-  const gamesData = [
-    {
-      title: "Genshin Impact",
-      desc: "Petualangan fantasi di dunia terbuka.",
-      rating: "18+",
-      badgeColor: "bg-red-600 shadow-[0_4px_12px_rgba(220,38,38,0.3)]",
-      img: ""
-    },
-    {
-      title: "Mobile Legends",
-      desc: "MOBA strategi dengan pertarungan tim.",
-      rating: "18+",
-      badgeColor: "bg-red-600 shadow-[0_4px_12px_rgba(220,38,38,0.3)]",
-      img: ""
-    },
-    {
-      title: "Resident Evil",
-      desc: "Horor bertahan hidup melawan zombie.",
-      rating: "18+",
-      badgeColor: "bg-red-600 shadow-[0_4px_12px_rgba(220,38,38,0.3)]",
-      img: ""
-    },
-    {
-      title: "Neko Michi",
-      desc: "Petualangan ringan dengan karakter kucing.",
-      rating: "3+",
-      badgeColor: "bg-blue-500 shadow-[0_4px_12px_rgba(59,130,246,0.3)]",
-      img: ""
-    }
-  ];
 
   return (
     <section className="relative max-w-[1366px] mx-auto z-20">
@@ -54,7 +24,7 @@ export default function PopularGames() {
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {gamesData.map((game, i) => (
+          {popularGamesData.map((game, i) => (
             <motion.div
               key={i}
               initial="hidden"

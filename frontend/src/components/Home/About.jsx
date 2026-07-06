@@ -18,18 +18,18 @@ export default function About() {
       >
         {/* Title & Description */}
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
             Tentang <span className="text-primary-4 bg-gradient-to-r from-primary-5 to-primary-4 bg-clip-text text-transparent">Kami</span>
           </h2>
           
-          <div className="border-l-[3px] border-white/20 pl-6 space-y-4">
-            <h3 className="text-xl md:text-2xl font-semibold text-white tracking-wide leading-snug">
-              IGRS atau Klasifikasi Permainan Interaktif Elektronik <span className="text-primary-5">(KPIE)</span>
+          <div className="border-l-[3px] border-white/20 pl-6">
+            <h3 className="text-xl md:text-3xl font-base text-white tracking-wide leading-snug">
+              IGRS atau Klasifikasi Permainan Interaktif Elektronik <span className="text-primary-6">(KPIE)</span>
             </h3>
-            <p className="text-neutral-5 max-w-4xl leading-relaxed text-base md:text-[1.05rem] font-normal">
-              Indonesia Game Rating System (IGRS) adalah platform dari Kementerian Komunikasi dan Digital RI agar permainan digital di Indonesia lebih tepat sasaran.
-            </p>
           </div>
+          <p className="text-neutral-6 max-w-[80rem] leading-relaxed text-base md:text-[1.5rem] font-normal">
+            Indonesia Game Rating System (IGRS) adalah platform dari Kementerian Komunikasi dan Digital RI agar permainan digital di Indonesia lebih tepat sasaran.
+          </p>
         </div>
 
         {/* Stats Grid */}
@@ -38,7 +38,7 @@ export default function About() {
             <h4 className="text-5xl md:text-6xl font-bold text-primary-5 tracking-tight drop-shadow-[0_0_20px_rgba(215,180,255,0.2)]">
               5225
             </h4>
-            <p className="text-neutral-5 text-md md:text-base font-base tracking-widest">
+            <p className="text-neutral-6 text-md md:text-base font-base tracking-widest">
               Total gim yang terdaftar
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function About() {
             <h4 className="text-5xl md:text-6xl font-bold text-primary-5 tracking-tight drop-shadow-[0_0_20px_rgba(215,180,255,0.2)]">
               3116
             </h4>
-            <p className="text-neutral-5 text-sm md:text-base font-medium tracking-wide">
+            <p className="text-neutral-6 text-sm md:text-base font-medium tracking-wide">
               Total penerbit gim yang terdaftar
             </p>
           </div>
