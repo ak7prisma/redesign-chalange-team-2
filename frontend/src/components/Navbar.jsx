@@ -1,13 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-
-const navLinks = [
-  { to: '/', label: 'Beranda' },
-  { to: '/tentang', label: 'Tentang' },
-  { to: '/informasi-rating', label: 'Informasi Rating' },
-  { to: '/games', label: 'Games' },
-];
+import { navLinks } from '../data/navigationData';
 
 export default function Navbar() {
   return (

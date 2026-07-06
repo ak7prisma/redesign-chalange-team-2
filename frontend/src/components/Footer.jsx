@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiGlobe, FiMail } from 'react-icons/fi';
+import { footerQuickLinks, footerLegalLinks } from '../data/navigationData';
 
 export default function Footer() {
   return (
@@ -40,10 +41,13 @@ export default function Footer() {
               Tautan Cepat
             </h4>
             <ul className="space-y-4 text-sm text-neutral-5">
-              <li><Link to="/" className="hover:text-white transition-colors">Beranda</Link></li>
-              <li><Link to="/informasi-rating" className="hover:text-white transition-colors">Informasi Rating</Link></li>
-              <li><Link to="/games" className="hover:text-white transition-colors">Blog &amp; Berita</Link></li>
-              <li><Link to="/tentang" className="hover:text-white transition-colors">FAQ</Link></li>
+              {footerQuickLinks.map((link, idx) => (
+                <li key={idx}>
+                  <Link to={link.to} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -53,10 +57,19 @@ export default function Footer() {
               Legalitas
             </h4>
             <ul className="space-y-4 text-sm text-neutral-5">
-              <li><a href="#" className="hover:text-white transition-colors">Syarat dan Ketentuan</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Maklumat Pelayanan</a></li>
-              <li><Link to="/kontak" className="hover:text-white transition-colors">Hubungi Kami</Link></li>
+              {footerLegalLinks.map((link, idx) => (
+                <li key={idx}>
+                  {link.to ? (
+                    <Link to={link.to} className="hover:text-white transition-colors">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
